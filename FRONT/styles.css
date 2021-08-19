@@ -1,0 +1,24 @@
+h1 {
+  color: red;
+}
+
+.first {
+  color: blue;
+}
+
+#first {
+  color: green;
+}
+
+.test h1{
+  color: pink;
+  text-align: center;
+}
+.image img{
+  display: block;
+  margin: 0 auto;
+}
+
+div {
+  background-color: pink;
+}
