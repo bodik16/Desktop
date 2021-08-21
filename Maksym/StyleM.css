@@ -1,0 +1,46 @@
+
+.mainflex {
+  display: flex;
+}
+.mainleft{
+  margin: auto 50px;
+}
+.divimg{
+  margin: auto 15px;
+  margin: 80px;
+}
+h1{
+  font-family:verdana;
+}
+h2{
+font-family:verdana;
+color: gray;
+font-size: 19px;
+}
+p{
+  font-family:georgia;
+  font-size: 14px;
+}
+@media only screen and (max-device-width: 750px){
+  .main {
+      display: block;
+      margin:
+
+  }
+}
+img{
+  width:460px;
+}
+.mainleft{
+  margin: 150px 15px;
+
+}
+h1{
+  font-size: 30px;
+}
+h2{
+  font-size: 15px;
+}
+p{
+  font-size: 10px;
+}
