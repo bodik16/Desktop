@@ -25,9 +25,7 @@ p{
   .main {
       display: block;
       margin:
-
   }
-}
 img{
   width:460px;
 }
@@ -43,4 +41,5 @@ h2{
 }
 p{
   font-size: 10px;
+}
 }
