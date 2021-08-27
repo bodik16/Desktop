@@ -1,0 +1,16 @@
+table{
+  table-layout: fixed;
+  width: 100%;
+}
+.overflow{
+  background-color: blue;
+      text-align: center;
+      overflow: scroll;
+      width: 100%;
+      height: 9vw;
+      font-size: 23px;
+      margin: 0px auto;
+}
+p{
+      margin: 0px auto;
+}
