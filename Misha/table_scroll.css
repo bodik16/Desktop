@@ -1,0 +1,20 @@
+table,tr,td{
+  font-family: fantasy;
+border: 3px solid black;
+border-collapse: collapse;
+background: blue;
+color: white;
+height: 5px;
+text-align: center;
+}
+p:hover{
+  background: red;
+}
+td{overflow: scroll;
+
+}
+.floor{
+  height: 1vw;
+  width: 10vw;
+  margin: auto;
+}
