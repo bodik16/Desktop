@@ -1,0 +1,28 @@
+div {
+  color: Red;
+}
+
+.second {
+  color: orange;
+}
+.third {
+  color: green;
+}
+#priority{
+  color: brown;
+}
+.first {
+  color: black;
+}
+.position {
+      background: linear-gradient(#F5B8B1,#A6A4A3) fixed;
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.ultrass {
+    width: 33.3%;
+}
+div#item2 {
+    text-align: right;
+}
