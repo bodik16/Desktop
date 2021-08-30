@@ -1,0 +1,34 @@
+table, tr, td, th{
+  font-family: arial, sans-serif;
+border: 2px solid black;
+border-collapse: collapse;
+background: purple;
+color: black;
+height: 2px;
+margin: auto;
+}
+
+
+p:hover{
+  background: yellow;
+margin: auto 0px;
+}
+td{
+  height: 1px;
+  overflow: scroll;
+scroll-behavior: smooth;
+}
+.overflow{
+  height: 12px;
+  text-align: center;
+  font-size: 12px;
+  margin: 0 auto;
+width: 10vw;
+}
+
+p{
+margin: auto;
+}
+tr{
+  margin: auto;
+}
