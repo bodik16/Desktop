@@ -8,6 +8,7 @@ height: 2px;
 margin: auto;
 }
 
+
 p:hover{
   background: yellow;
 margin: auto 0px;
@@ -30,5 +31,4 @@ margin: auto;
 }
 tr{
   margin: auto;
-
 }
