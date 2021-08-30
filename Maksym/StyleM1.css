@@ -27,7 +27,6 @@
 .text2{
   font-style: italic;
 }
-<<<<<<< HEAD
 @media only screen and (max-device-width: 750px){
 .texts{
   margin: auto 5px;
@@ -43,5 +42,3 @@ img{
   width: 248px;
 }
 }
-=======
->>>>>>> f147905f8982f23f7d12c1777fc738650c58f46f
