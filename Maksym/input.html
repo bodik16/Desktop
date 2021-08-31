@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>LoL</title>
+      <link rel="shortcut icon" href="title.png">
+      <link rel="stylesheet" type="text/css" href="input.css" >
+  </head>
+  <body>
+    <h1>User registratiOn</h1>
+  <form class="" action="#" method="post" enctype="multipart/form-data">
+  <div class="name">
+      <p>User Name:</p>
+    <input type="text" placeholder="Нік" name="User Name" tabindex="1" minlength="5" maxlength="10">
+  </div>
+  <div class="Password">
+    <p>Password: </p>
+    <input placeholder="Not date Of birth" type="password" minlength="8" maxlength="15" name="Password" tabindex="2" value="">
+    <p>→not less than 8 characters<br>not more than 15 characters←</p>
+  </div>
+<div class="Email">
+  <p>Email:</p>
+<input type="email" multiple placeholder="quest@mail.com" tabindex="4" name="Email" minlength="12" maxlength="20">
+</div>
+<div class="radio">
+  <p>Select Gender:</p>
+  <input tabindex="5" checked type="radio" name="radio" > Male
+  <input tabindex="5" type="radio" name="radio"> Female
+</div>
+<div class="checkbox">
+  <p>What games do you play:</p>
+  <input type="checkbox" tabindex="6" checked name="Checkbox" value=""> CS Go
+  <input type="checkbox" tabindex="7" name="Checkbox2" value=""> Other game
+  <input type="checkbox" tabindex="8" disabled name="Checkbox3" value=""> MineCraft
+</div>
+<div class="yourself">
+  <p>Write a little about yourself:</p>
+  <textarea tabindex="8" name="yourself" placeholder="Don't write 'qwwqwq'" maxlength="69"></textarea>
+</div>
+<div class="Photo">
+  <p>Upload your photo</p>
+  <input type="file" name="yourphoto" tabindex="9" accept="png, jpg">
+</div>
+<div class="yourcolor">
+  <p>Your favorite color?</p>
+  <select class="select" tabindex="10" name="select">
+    <option value="red">Red</option>
+<option selected value="blue">blue</option>
+<option value="green">green</option>
+<option value="purple">purple</option>
+<option value="yellow">yellow</option>
+  </select>
+</div>
+<div class="Buttons">
+  <button type="submit" tabindex="11"name="submit">Submit</button>
+  <input type="reset" name="reset" tabindex="12" value="Reset Form">
+</div>
+</form>
+  </body>
+</html>
