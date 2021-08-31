@@ -15,6 +15,10 @@
   color: #ff1493;
 }
 
+#salutation {
+  color: #ff1493;
+}
+
 .col-title {
     font-family: " Fantasy", Times, serif;
     font-size: 70px;
@@ -32,6 +36,13 @@
   padding: 1px 0 4px;
   color: #00263e;
 }
+
+#dwfrm_profile_login_password_d0xraqodrilp{
+  color:#ff1493;
+}
+
+.toggle-password.hidden {
+  color:#ff1493 }
 
 .register {
   font-size: 25px;
