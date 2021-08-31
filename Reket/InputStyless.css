@@ -1,3 +1,49 @@
-div {
-  color: Red;
+.real.name {
+  color: #ff1493;
+  font-size: 15px;
+  line-height: 0.2;
+  padding: 1px 0 4px;
+
+}
+.second.name {
+  color: #ff1493;
+  font-size: 15px;
+  line-height: 0.2;
+  padding: 1px 0 4px;}
+
+.dwfrm_profile_customer_firstname {
+  color: #ff1493;
+}
+
+.col-title {
+    font-family: " Fantasy", Times, serif;
+    font-size: 70px;
+    line-height: 1.2;
+    text-align: center;
+    padding: 20px 0 4px;
+    color: #00263e;
+  }
+
+.col-message.text-transform-none {
+  font-family: " Fantasy", Times, serif;
+  font-size: 25px;
+  line-height: 0.2;
+  text-align: center;
+  padding: 1px 0 4px;
+  color: #00263e;
+}
+
+.register {
+  font-size: 25px;
+  line-height: 0.2;
+  text-align: center;
+  padding: 1px 0 4px;
+}
+
+.fieldset {
+  height: 50%;
+  width: 80%;
+  background: #ffffff;
+  margin: auto;
+  text-align: center;
 }
