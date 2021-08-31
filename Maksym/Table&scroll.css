@@ -1,0 +1,58 @@
+
+.table{
+  margin: 0px;
+  background-image: url("back.png");
+  height: 890px;
+  width: auto;
+}
+caption{
+  font-size: 30px;
+font-family: sans-serif;
+font-weight: bold;
+color: red;
+}
+
+body{
+  margin: 3px;
+}
+.overflow{
+  background-color: #6984ff;
+    text-align: center;
+    overflow: scroll;
+    width: 100%;
+    height: 4vw;
+    font-size: 15px;
+    margin: 0px auto;
+}
+table, tr, td, th{
+  border: 2px solid #ff4a4a;
+  border-collapse: collapse;
+  margin: auto;
+  background-color: #fffaa3;
+}
+caption:hover{
+  text-decoration: underline;
+}
+.serial{
+  width: 10vw;
+  font-style: italic;
+  font-size: 16px;
+}
+th{
+  width: 10vw;
+}
+tbody{
+  margin: 2px;
+}
+.overflow:hover{
+  background-color: yellow;
+}
+table{
+  width: auto;
+
+}
+.table-overflow {
+  width: 100%;
+  height: 450px;
+  overflow: scroll;
+}
