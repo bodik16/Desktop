@@ -1,35 +1,91 @@
+@font-face {
+  font-family: 'fece_fear';
+  src: url('FaceYourFears.ttf')
+       }
+
+@font-face {
+   font-family: 'now';
+   src: url('Some.ttf')
+              }
+
+@font-face {
+   font-family: 'then';
+   src: url('Type.ttf')
+                            }
+
 .real.name {
   color: #ff1493;
-  font-size: 15px;
+  font-size: 24px;
   line-height: 0.2;
   padding: 1px 0 4px;
-
+font-family: 'now';
 }
 .second.name {
   color: #ff1493;
-  font-size: 15px;
+  font-size: 24px;
   line-height: 0.2;
-  padding: 1px 0 4px;}
+  padding: 1px 0 4px;
+font-family: 'now';
+}
 
 .dwfrm_profile_customer_firstname {
   color: #ff1493;
+  font-family: 'now';
+}
+
+
+.ruless{
+  font-family: 'now';
+  font-size: 20px;
 }
 
 #salutation {
   color: #ff1493;
+  padding: 2% 1%;
+  font-family: 'fece_fear';
+  font-size: 20px;
+}
+
+.form-caption{
+  font-size: 20px;
+  font-family: 'now';
+}
+
+form {
+    width: 30%;
+    margin: 0 auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url();
+}
+
+.password20 {
+  font-size: 20px;
+  font-family: 'now';
 }
 
 .col-title {
-    font-family: " Fantasy", Times, serif;
-    font-size: 70px;
-    line-height: 1.2;
+    font-family: 'fece_fear';
+    font-size: 100px;
+    line-height: 0.2;
     text-align: center;
-    padding: 20px 0 4px;
+    padding: 4px 0 4px;
     color: #00263e;
   }
 
+.seven{
+color: #ff1493
+font-family: 'fece_fear';
+}
+
+.top.riter{
+  color: #fc0000;
+  font-size: 35px;
+  font-family: 'then';
+}
+
 .col-message.text-transform-none {
-  font-family: " Fantasy", Times, serif;
+  font-family: 'fece_fear';
   font-size: 25px;
   line-height: 0.2;
   text-align: center;
@@ -42,13 +98,31 @@
 }
 
 .toggle-password.hidden {
-  color:#ff1493 }
+  font-family: 'fece_fear';
+  color:#ff1493;
+  font-size: 20px;}
+
+.input-text.required {
+    color: #ff1493;
+    border-color: #00263e;
+    padding: 5% 30% 5% 5%;
+    font-size: 33px;
+    font-family: 'fece_fear';
+  }
+
+  span.top.possition {
+      position: relative;
+      top: -90px;
+      left: 10px;
+  }
+
 
 .register {
   font-size: 25px;
   line-height: 0.2;
   text-align: center;
   padding: 1px 0 4px;
+  font-family: 'fece_fear';
 }
 
 .fieldset {
