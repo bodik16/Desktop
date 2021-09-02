@@ -4,13 +4,16 @@
     <meta charset="utf-8">
     <title>Front End Base</title>
     <link rel="stylesheet" type="text/css" href="styles.css"  />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+    <script type="text/javascript" src="functions.js"></script>
     <link rel="shortcut icon" href="https://5.imimg.com/data5/PK/AI/EE/SELLER-56292461/fdkk-png-500x500.png">
   </head>
   <body>
   <div class="items">
     <div class="item">
       <label for="fname"> First Name </label>
-      <input type="text" id="fname" name="fname">
+      <input type="text" class="first-name" id="fname" name="fname">
     </div>
 
     <div class="item">
@@ -21,6 +24,7 @@
     <div class="item">
       <label for="passwordi"> Password </label>
       <input type="password" id="passwordi" name="fname">
+      <button type="button" class="show-hide-password" name="button">show</button>
     </div>
 
     <div class="item">
@@ -43,11 +47,10 @@
     </div>
 
     <div class="item">
-      <button onclick="location.href='https://www.w3schools.com/tags/tag_input.asp'">
+      <button class="button-btn">
         sing up
       </button>
     </div>
-
   </div>
   </body>
 </html>
