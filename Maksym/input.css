@@ -55,3 +55,11 @@ button:hover{
 .reset:hover{
   background-color: red;
 }
+a{
+  color: white;
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: underline;
+  color: blue;
+}
