@@ -7,44 +7,49 @@
       <link rel="stylesheet" type="text/css" href="input.css" >
   </head>
   <body>
+    <div class="body">
+    <div class="Title">
     <h1>User registratiOn</h1>
+    </div>
   <form class="" action="#" method="post" enctype="multipart/form-data">
   <div class="name">
-      <p>User Name:</p>
+      <label for="User name">User Name:</label>
     <input type="text" placeholder="Нік" name="User Name" tabindex="1" minlength="5" maxlength="10">
   </div>
   <div class="Password">
-    <p>Password: </p>
+    <label for="password">Password:</label>
     <input placeholder="Not date Of birth" type="password" minlength="8" maxlength="15" name="Password" tabindex="2" value="">
-    <p>→not less than 8 characters<br>not more than 15 characters←</p>
+</div>
+<div class="shadowbox">
+    <p>not less than 8 characters<br>not more than 15 characters</p>
   </div>
 <div class="Email">
-  <p>Email:</p>
+  <label for="Email">E-mail:</label>
 <input type="email" multiple placeholder="quest@mail.com" tabindex="4" name="Email" minlength="12" maxlength="20">
 </div>
 <div class="radio">
-  <p>Select Gender:</p>
+  <label for="radio">Select Gender:</label>
   <input tabindex="5" checked type="radio" name="radio" > Male
   <input tabindex="5" type="radio" name="radio"> Female
 </div>
 <div class="checkbox">
-  <p>What games do you play:</p>
+  <label for="checkbox">What games do you play?</label><br>
   <input type="checkbox" tabindex="6" checked name="Checkbox" value=""> CS Go
   <input type="checkbox" tabindex="7" name="Checkbox2" value=""> Other game
-  <input type="checkbox" tabindex="8" disabled name="Checkbox3" value=""> MineCraft
+  <input type="checkbox" tabindex="8" disabled name="Checkbox3"> <s>MineCraft</s>
 </div>
 <div class="yourself">
-  <p>Write a little about yourself:</p>
+  <label for="yourself">Write a little about yourself:</label>
   <textarea tabindex="8" name="yourself" placeholder="Don't write 'qwwqwq'" maxlength="69"></textarea>
 </div>
 <div class="Photo">
-  <p>Upload your photo</p>
+  <label for="yourphoto">Upload your Photo:</label>
   <input type="file" name="yourphoto" tabindex="9" accept="png, jpg">
 </div>
 <div class="yourcolor">
-  <p>Your favorite color?</p>
-  <select class="select" tabindex="10" name="select">
-    <option value="red">Red</option>
+  <label for="color">Your favorite color?</label>
+  <select tabindex="10" name="color">
+<option background="red" class="red" value="red">Red</option>
 <option selected value="blue">blue</option>
 <option value="green">green</option>
 <option value="purple">purple</option>
@@ -53,8 +58,9 @@
 </div>
 <div class="Buttons">
   <button type="submit" tabindex="11"name="submit">Submit</button>
-  <input type="reset" name="reset" tabindex="12" value="Reset Form">
+  <button class="reset" type="reset" name="reset" tabindex="12" >Reset</button>
 </div>
 </form>
+</div>
   </body>
 </html>

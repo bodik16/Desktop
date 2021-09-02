@@ -1,0 +1,57 @@
+body{
+  background-image: linear-gradient(to right, #9a0000, #77010c, #520000, #3c0000, #210000, #000000, #080305, #0b0119, #12012b, #000240, #00045a, #000582);
+}
+h1{
+
+  color: #ffffff;
+  text-align: center;
+  font:small-caps bold 35px/1 sans-serif;
+  text-shadow: 4px 2px 1px #676767;
+}
+p{
+  font-family: serif;
+    display: block;
+    text-align: inherit;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 12px;
+    color: #999999;
+}
+div{
+  margin: 10px auto;
+}
+form{
+    display: block;
+    display: grid;
+    color: white;
+}
+label{
+    color: #999999;
+    font-family: math;
+    font-variant-caps: small-caps;
+    font-weight: 900;
+}
+.shadowbox{
+  width: 9em;
+  border: 1px solid black;
+  box-shadow: 3px -2px 1px #202020;
+}
+.checkbox{
+  text-align: center;
+}
+.yourself{
+  display: inline-grid;
+}
+.Photo{
+  text-align: center;
+  display: grid;
+}
+.yourcolor{
+  display: grid;
+}
+button:hover{
+  background-color: blue;
+}
+.reset:hover{
+  background-color: red;
+}
