@@ -3,26 +3,54 @@
   <head>
     <meta charset="utf-8">
     <title>Front End Base</title>
+    <link rel="stylesheet" type="text/css" href="styles.css"  />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+    <script type="text/javascript" src="functions.js"></script>
     <link rel="shortcut icon" href="https://5.imimg.com/data5/PK/AI/EE/SELLER-56292461/fdkk-png-500x500.png">
   </head>
   <body>
+  <div class="items">
+    <div class="item">
+      <label for="fname"> First Name </label>
+      <input type="text" class="first-name" id="fname" name="fname">
+    </div>
 
-      <h1>Моя домашка</h1>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/vTy8KFB5cEs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<hr>
-<div class="shadowbox">
-<h1>Home work</h1>
-<p><em><b>smghsa faf f F GJH;IX</b></em></p>
-<h2>My YouTube Channel:</h2>
-<iframe  width="454" height="268" src="https://www.youtube.com/embed/_Ke9rfbuTN4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<hr>
-<div>
+    <div class="item">
+      <label for="sname"> Second Name </label>
+      <input type="text" id="sname" name="fname">
+    </div>
+
+    <div class="item">
+      <label for="passwordi"> Password </label>
+      <input type="password" id="passwordi" name="fname">
+      <button type="button" class="show-hide-password" name="button">show</button>
+    </div>
+
+    <div class="item">
+      <label for="age"> Age </label>
+      <input type="number" id="age" min="10" max="100" name="fname">
+    </div>
+
+
+    <div class="item">
+      <label for="checking"> Are you sure? </label>
+      <input type="checkbox" id="checking" name="fname" checked>
+      <input type="checkbox" id="checking" name="fname" checked>
+    </div>
+
+    <div class="item">
+      <label for="agecheckplus"> Male/Female </label>
+      <input type="radio" name="agecheckplus" id="">
+      <input type="radio" name="agecheckplus" id="">
+
+    </div>
+
+    <div class="item">
+      <button class="button-btn">
+        sing up
+      </button>
+    </div>
+  </div>
   </body>
-<div class="test">
-</div>
-<style media="screen">
-  .test {
-    color: gray;
-  }
-</style>
 </html>
