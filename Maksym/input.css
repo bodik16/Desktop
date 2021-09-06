@@ -54,3 +54,8 @@ button:hover{
 .reset:hover{
   background-color: red;
 }
+input{
+  color: #560000;
+    background-color: darkslateblue;
+    cursor: textarea;
+}
