@@ -1,5 +1,6 @@
 let nik = document.querySelector('.name>input');
-//nik.setAttribute('defaultChecked','true')
 nik.placeholder = "Nik";
-
-console.log(nik.value);
+//
+let input = document.querySelector('.name>input').value;
+console.log(input);
+alert(`${input}`); 
