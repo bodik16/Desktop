@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<meta charset="utf-8">
+	<title>WoW</title>
+	<link rel="shortcut icon" href="title.png">
+</head>
+
+<body>
+	<h1 style="font-family: 'Times New Roman', Times, serif; text-align: center;margin: 10px auto;">Home work</h1>
+	<h2 style="text-align: center;">Numbers: <span>1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
+			19</span>
+	</h2>
+	<div style="text-align: center;" class="numbers">
+		<h3>Integers: </h3>
+	</div>
+	<script>
+		let on = 2;
+		let integer = [];
+		let matrix = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19];
+		for (let i = 1; i < matrix.length; i++) {
+			if (i % 2 == 0) {
+				integer[i - on] = i;
+				on++;
+			}
+		}
+		console.log(`Цілі числа: ${integer}`);
+		const element = document.querySelector('.numbers');
+		const newElement = document.createElement('h3');
+		newElement.innerHTML = integer;
+		element.append(newElement);
+		element.style.cssText = ` display: flex; justify-content: center;`;
+		const elementsDivs = document.querySelector('.numbers>h3');
+		elementsDivs.style.cssText = `margin: auto 5px`;
+	</script>
+
+</body>
+
+</html>
