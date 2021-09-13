@@ -8,8 +8,8 @@
 
 
 <body>
-  <div class="cars" id="non">
-<!-- I -->
+  <div class="items" id="non">
+
   </div>
 
 </body>
@@ -19,42 +19,45 @@
 <script type="text/javascript">
 
 var cars = [
-
-
-  {
+{
     "brand":"jaguar",
     "color": "purple",
     "type": "minivan",
     "capacity": 7
-    },
-
-  {
-    "brand":"porshe",
-    "color": "red",
+    },{
+      "brand":"porshe",
+      "color": "red",
+      "type": "station wagon",
+      "capacity": 5
+    },{
+    "brand":"zhugyl",
+    "color": "green",
     "type": "station wagon",
     "capacity": 5
-  },
-
-  {
+  },{
     "brand":"bmw",
     "color": "yellow",
     "type": "station wagon",
     "capacity": 5
-  },
-
-    {
+  },{
     "brand":"vw",
     "color": "black",
     "type": "station wagon",
     "capacity": 5
   }
-
-
-document.getElementById("non").innerHTML = "whatever";
-
-
-
-
 ]
+
+
+
+
+for (var i = 0; i < cars.length; i++) {
+console.log(cars[0].length);
+  document.getElementById("non").append(cars[i].length);
+for (var j = 0; j < cars[i].length; j++) {
+  document.getElementById("non").append("cars[i]");
+  }
+
+
+}
 
 </script>
