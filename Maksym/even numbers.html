@@ -11,12 +11,28 @@
 	<h1 style="font-family: 'Times New Roman', Times, serif; text-align: center;margin: 10px auto;">Home work</h1>
 	<h2 style="text-align: center;">Numbers: <span>1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
 			19</span>
+		<div class="input" style="margin: 10px auto;">
+			<p>Select Even or non-Even Numbers</p>
+			<input type="radio" id="even1" name="radio">Even Numbers
+			<input type="radio" id="noneven1" name="radio">non-Even Numbers
+		</div>
+		<div class="button">
+			<button style="width: 100px; height: 35px;font-size: 25px;margin: 5px auto;" id="check" type="button">
+				Check</button>
+		</div>
 	</h2>
-	<div style="text-align: center;" class="numbers">
-		<h3>Even numbers: </h3>
+	<div>
+		<div style="text-align: center; font-size: 24px; margin: 10px auto;" class="even">
+			<h4>Even numbers: </h4>
+		</div>
+		<div style="text-align: center; font-size: 24px; margin: 10px auto" class="noneven">
+			<h4>non-Even numbers: </h4>
+		</div>
 	</div>
 	<script>
 		let on = 2;
+		let no = 1;
+		let nonEven = [];
 		let integer = [];
 		let matrix = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19];
 		for (let i = 1; i < matrix.length; i++) {
@@ -25,14 +41,31 @@
 				on++;
 			}
 		}
+		for (let i = 1; i <= matrix.length; i++) {
+			if (i % 2 > 0) {
+				nonEven[i - no] = i;
+				no++;
+			}
+		}
+		console.log(`NonEven: ${nonEven}`);
 		console.log(`Цілі числа: ${integer}`);
-		const element = document.querySelector('.numbers');
-		const newElement = document.createElement('h3');
-		newElement.innerHTML = integer;
-		element.append(newElement);
-		element.style.cssText = ` display: flex; justify-content: center;`;
-		const elementsDivs = document.querySelector('.numbers>h3');
-		elementsDivs.style.cssText = `margin: auto 5px`;
+		check.onclick = function () {
+			if (document.getElementById('even1').checked) {
+				const element = document.querySelector('.even');
+				const newElementnon = document.createElement('h3');
+				newElementnon.innerHTML = integer;
+				element.append(newElementnon);
+				setTimeout(() => alert('перевірив?'), 250);
+				setTimeout(location.reload.bind(location), 1000);
+			} else if (document.getElementById('noneven1').checked) {
+				const elementN = document.querySelector('.noneven');
+				const newElementnonN = document.createElement('h3');
+				newElementnonN.innerHTML = nonEven;
+				elementN.append(newElementnonN);
+				setTimeout(() => alert('перевірив?'), 250);
+				setTimeout(location.reload.bind(location), 1000);
+			}
+		}
 	</script>
 </body>
 
