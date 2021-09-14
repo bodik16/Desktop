@@ -1,0 +1,93 @@
+<head>
+	<meta charset="utf-8">
+	<title>WoW</title>
+	<link rel="shortcut icon" href="title.png">
+</head>
+
+<body>
+	<h1 style="font-family: 'Times New Roman', Times, serif; text-align: center;margin: 10px auto;">Home work</h1>
+	<h2 style="text-align: center;">Numbers: <span>1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
+			19</span>
+		<div class="enterNumbers">
+			<p>Enter numbers<input id="writenumbers" type="text" placeholder="1,2,3,4,5" value=""
+					onkeyup="return proverka(this);" onchange="return proverka(this);"></p>
+			<button type="button" name="bEnter" id="bEnter">Submit</button>
+		</div>
+		<div class="input" style="margin: 10px auto;">
+			<p>Select Even or non-Even Numbers</p>
+			<input type="radio" id="even1" name="radio">Even Numbers
+			<input type="radio" id="noneven1" name="radio">non-Even Numbers
+		</div>
+		<div class="button">
+			<button style="width: 100px; height: 35px;font-size: 25px;margin: 5px auto;" id="check" type="button">
+				Check</button>
+		</div>
+	</h2>
+	<div>
+		<div style="text-align: center; font-size: 24px; margin: 10px auto;" class="even">
+			<h4>Even numbers: </h4>
+		</div>
+		<div style="text-align: center; font-size: 24px; margin: 10px auto" class="noneven">
+			<h4>non-Even numbers: </h4>
+		</div>
+	</div>
+	<script>
+		window.onload = function () {
+			var input = document.getElementById("writenumbers");
+			if (localStorage.getItem("input")) {
+				//if there is a stored value, apply it to the input
+				input.value = localStorage.getItem("input");
+			}
+			input.oninput = function () {
+				//if input is changed, store it
+				localStorage.setItem("input", input.value);
+			};
+		};
+		function proverka(input) {
+			input.value = input.value.replace(/[^\d,]/g, '');
+		};
+		bEnter.onclick = function () {
+			let string = document.getElementById("writenumbers").value;
+			//console.log(string);
+			let matrix = string.split(',').map(Number);
+			//console.log(matrix);
+			let on = 0;
+			let no = 0;
+			let nonEven = [];
+			let integer = [];
+			for (let i = 0; i <= matrix.length; i++) {
+				if (matrix[i] % 2 == 0) {
+					integer[on] = matrix[i];
+					on++;
+				}
+			}
+			for (let i = 0; i <= matrix.length; i++) {
+				if (matrix[i] % 2 > 0) {
+					nonEven[no] = matrix[i];
+					no++;
+				}
+			}
+			//console.log(`NonEven: ${nonEven}`);
+			//console.log(`Even: ${integer}`);
+			check.onclick = function () {
+				if (document.getElementById('even1').checked) {
+					const element = document.querySelector('.even');
+					const newElementnon = document.createElement('h3');
+					newElementnon.innerHTML = integer;
+					element.append(newElementnon);
+					setTimeout(() => alert('перевірив?'), 250);
+					setTimeout(location.reload.bind(location), 1000);
+				} else if (document.getElementById('noneven1').checked) {
+					const elementN = document.querySelector('.noneven');
+					const newElementnonN = document.createElement('h3');
+					newElementnonN.innerHTML = nonEven;
+					elementN.append(newElementnonN);
+					setTimeout(() => alert('перевірив?'), 250);
+					setTimeout(location.reload.bind(location), 1000);
+				}
+			}
+		}
+	</script>
+</body>
+
+</html>
