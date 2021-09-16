@@ -2,6 +2,8 @@
 	<meta charset="utf-8">
 	<title>WoW</title>
 	<link rel="shortcut icon" href="title.png">
+	<link rel="stylesheet" href="Hard.css">
+
 </head>
 
 <body>
@@ -24,71 +26,14 @@
 				Check</button>
 		</div>
 	</h2>
-	<div>
-		<div style="text-align: center; font-size: 24px; margin: 10px auto;" class="even">
-			<h4>Even numbers: </h4>
-		</div>
-		<div style="text-align: center; font-size: 24px; margin: 10px auto" class="noneven">
-			<h4>non-Even numbers: </h4>
+	<div class="zaebal">
+		<h3 style="display: none;">Solution: </h3>
+		<div class="answer">
+
 		</div>
 	</div>
-	<script>
-		window.onload = function () {
-			var input = document.getElementById("writenumbers");
-			if (localStorage.getItem("input")) {
-				//if there is a stored value, apply it to the input
-				input.value = localStorage.getItem("input");
-			}
-			input.oninput = function () {
-				//if input is changed, store it
-				localStorage.setItem("input", input.value);
-			};
-		};
-		function proverka(input) {
-			input.value = input.value.replace(/[^\d,]/g, '');
-		};
-		bEnter.onclick = function () {
-			let string = document.getElementById("writenumbers").value;
-			//console.log(string);
-			let matrix = string.split(',').map(Number);
-			//console.log(matrix);
-			let on = 0;
-			let no = 0;
-			let nonEven = [];
-			let integer = [];
-			for (let i = 0; i <= matrix.length; i++) {
-				if (matrix[i] % 2 == 0) {
-					integer[on] = matrix[i];
-					on++;
-				}
-			}
-			for (let i = 0; i <= matrix.length; i++) {
-				if (matrix[i] % 2 > 0) {
-					nonEven[no] = matrix[i];
-					no++;
-				}
-			}
-			//console.log(`NonEven: ${nonEven}`);
-			//console.log(`Even: ${integer}`);
-			check.onclick = function () {
-				if (document.getElementById('even1').checked) {
-					const element = document.querySelector('.even');
-					const newElementnon = document.createElement('h3');
-					newElementnon.innerHTML = integer;
-					element.append(newElementnon);
-					setTimeout(() => alert('перевірив?'), 250);
-					setTimeout(location.reload.bind(location), 1000);
-				} else if (document.getElementById('noneven1').checked) {
-					const elementN = document.querySelector('.noneven');
-					const newElementnonN = document.createElement('h3');
-					newElementnonN.innerHTML = nonEven;
-					elementN.append(newElementnonN);
-					setTimeout(() => alert('перевірив?'), 250);
-					setTimeout(location.reload.bind(location), 1000);
-				}
-			}
-		}
-	</script>
+
+	<script src="hard.js"></script>
 </body>
 
 </html>
