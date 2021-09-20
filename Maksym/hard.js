@@ -18,7 +18,18 @@ window.onload = function () {
 function proverka(input) {
 	input.value = input.value.replace(/[^\d,]/g, '');
 };
+var check = false;
 bEnter.onclick = function () {
+	function play() {
+		if (!check) {
+			var audio = new Audio();
+			audio.src = 'sound/plented.mp3';
+			audio.autoplay = true;
+			check = true;
+		}
+	}
+
+	setTimeout(play, 500);
 	let string = document.getElementById("writenumbers").value;
 	//console.log(string);
 	let matrix = string.split(',').map(Number);
@@ -64,3 +75,5 @@ bEnter.onclick = function () {
 	obj2.style.display = "";
 	obj3.style.display = "";
 }
+
+
