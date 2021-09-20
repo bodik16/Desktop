@@ -18,14 +18,14 @@ window.onload = function () {
 function proverka(input) {
 	input.value = input.value.replace(/[^\d,]/g, '');
 };
-var check = false;
+var check1 = false;
 bEnter.onclick = function () {
 	function play() {
-		if (!check) {
+		if (!check1) {
 			var audio = new Audio();
 			audio.src = 'sound/plented.mp3';
 			audio.autoplay = true;
-			check = true;
+			check1 = true;
 		}
 	}
 
