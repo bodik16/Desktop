@@ -18,18 +18,18 @@ window.onload = function () {
 function proverka(input) {
 	input.value = input.value.replace(/[^\d,]/g, '');
 };
-var check1 = false;
+var check11 = false;
+
 bEnter.onclick = function () {
-	function play() {
+	function play1() {
 		if (!check1) {
 			var audio = new Audio();
-			audio.src = 'sound/plented.mp3';
+			audio.src = 'sound/click.mp3';
 			audio.autoplay = true;
-			check1 = true;
+			check11 = true;
 		}
 	}
-
-	setTimeout(play, 500);
+	setTimeout(play1, 100);
 	let string = document.getElementById("writenumbers").value;
 	//console.log(string);
 	let matrix = string.split(',').map(Number);
@@ -53,7 +53,18 @@ bEnter.onclick = function () {
 	}
 	//console.log(`NonEven: ${nonEven}`);
 	//console.log(`Even: ${integer}`);
+	var check1 = false;
 	check.onclick = function () {
+		function play() {
+			if (!check1) {
+				var audio1 = new Audio();
+				audio.src = 'sound/click.mp3';
+				audio.autoplay = true;
+				check1 = true;
+			}
+
+		}
+
 		const solution = document.querySelector('.zaebal>h3');
 		if (document.getElementById('even1').checked) {
 			const element = document.querySelector('.answer');
