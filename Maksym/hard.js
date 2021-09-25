@@ -55,16 +55,6 @@ bEnter.onclick = function () {
 	//console.log(`Even: ${integer}`);
 	var check1 = false;
 	check.onclick = function () {
-		function play() {
-			if (!check1) {
-				var audio1 = new Audio();
-				audio.src = 'sound/click.mp3';
-				audio.autoplay = true;
-				check1 = true;
-			}
-
-		}
-
 		const solution = document.querySelector('.zaebal>h3');
 		if (document.getElementById('even1').checked) {
 			const element = document.querySelector('.answer');
