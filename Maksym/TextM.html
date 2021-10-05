@@ -9,27 +9,59 @@
 </head>
 
 <body>
-	<div class="head">
-		<h3>TRAVEL</h3>
-		<h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus at quibusdam.
-		</h1>
-	</div>
-	<div class="image">
-	</div>
-	<div class="text">
-		<h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur officia debitis, iusto quidem eos ipsum
-			perferendis ea sit sunt autem?</h3>
-		<h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro recusandae inventore eveniet nostrum, suscipit
-			iste fuga temporibus iusto!</h3>
-	</div>
-	<div class="ul">
-		<ul>Lorem ipsum dolor sit amet elit.</ul>
-		<ul>Lorem ipsum dolor sit amet.</ul>
-		<ul>Lorem ipsum dolor sit amet.</ul>
-		<ul>Lorem ipsum, dolor sit amet consectetur adipisicing.</ul>
-	</div>
-	<button>FULL STORY &#10142;</button>
+	<h1 style="text-align: center;">Hello World</h1>
+	<div><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae quo quod iusto, explicabo expedita debitis
+			at odio mollitia itaque nam eaque ex, sapiente, sed nostrum.</span></div>
+
+	<script>
+		let years = document.querySelector('h1');
+
+		setTimeout(dalay, 2000);
+
+		var conf;
+
+		function dalay() {
+			conf = confirm("Are you over 18 years old?");
+			if (conf == true) {
+				let question = document.createElement('h2');
+				question.innerHTML = "Please, write your age:";
+				question.style = "text-align: center";
+				years.after(question);
+
+				let years1 = document.querySelector('h2');
+				years1.insertAdjacentHTML('beforeEnd', `<input>`);
+				years1.insertAdjacentHTML('beforeEnd', `<button>Submit</button>`);
+
+				let years12 = document.querySelector('input');
+				years12.style.cssText = `margin: 0 0 0px 10px;`;
+				years12.setAttribute('type', 'number');
+				years12.setAttribute('value', '18');
+				years12.setAttribute('min', '18');
+				years12.setAttribute('max', '99');
+				years12.setAttribute('maxlength', '2');
+				years12.setAttribute('minlength', '2');
+
+				let btn = document.querySelector('button');
+
+				btn.onclick = function writeYears() {
+					let getYears = document.querySelector('input');
+					getYears.setAttribute('id', 'in')
+
+					let numberYear = document.getElementById("in").value;
+
+					if (numberYear > 17 && numberYear < 100) {
+						let string = "Your age is " + String(numberYear) + " years!";
+						alert(string);
+					} else {
+						getYears.value = 18;
+						alert("Age is not acceptable, please try again")
+					}
+				}
+			} else {
+				window.location.href = "https://google.com"
+			}
+		}
+	</script>
 </body>
 
 </html>
-<br>
