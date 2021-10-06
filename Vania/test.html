@@ -8,6 +8,17 @@
     <title>Document</title>
 </head>
 <body>
+<script>
+    let a = confirm('Тобі є 18?');
+    if (a == true){
+        b = prompt('Скільки саме років?')
+    } else if (a == false) {
+        window.location.href = "https://i.pinimg.com/originals/f2/92/ad/f292ad64f5f6b02c494452015c7a5dc2.jpg";
+    }
+    let year = 2021 - b;
+    year = String(year);
+    alert('Ти народився в - ' + year + ' році');
+</script>
 
 </body>
 </html>
