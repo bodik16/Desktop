@@ -3,19 +3,62 @@
 
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="TextM.css">
 	<title>Maksym</title>
 	<link rel="shortcut icon" href="title.png">
 </head>
 
 <body>
-	<h1 style="text-align: center;">Hello World</h1>
-	<div><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae quo quod iusto, explicabo expedita debitis
-			at odio mollitia itaque nam eaque ex, sapiente, sed nostrum.</span></div>
-	<div class="hard">
-
+	<h1 style="text-align: center;">Hello World___Такато діч</h1>
+	<div class="main">
+		<div class=" enterGender" style="display: flex;">
+			<h2>Please, enter your gender:</h2>
+			<input type="text" title="Please, enter your gender:" id="enterGender">
+		</div>
+		<h2>Please, enter your age:</h2>
+		<div class="enterAge" style="display: flex;">
+			<input type="text" title="Please, enter your age:" id="enterAge">
+		</div>
 	</div>
 	<script>
+		let gender = prompt("Enter your gender:", 'Female');
+		if (gender.toLowerCase() == "female") {
+			alert("Hello, You are woman")
+			let age = prompt("Please, enter your age", 18);
+			if (age > 0 && age < 18) {
+				alert("Hello, child, you have no place here")
+				location.reload();
+				window.open('https://www.google.com')
+			} else if (age > 17 && age < 26) {
+				alert("Hi, baby\nThis is my home work")
+			} else if (age > 25 && age < 101) {
+				alert("Hello, Woman\nThis is my home work")
+			} else {
+				location.reload();
+				window.open('https://www.google.com')
+			}
+		} else if (gender.toLowerCase() == "male") {
+			alert("Hello, Broo");
+			let age = prompt("Please, enter your age", 18);
+			if (age > 0 && age < 18) {
+				alert("Hello, child, you have no place here")
+				location.reload();
+				window.open('https://www.google.com')
+			} else if (age > 17 && age < 26) {
+				alert("Hi, young\nThis is my home work")
+			} else if (age > 25 && age < 101) {
+				alert("Hello, Man\nThis is my home work")
+			} else {
+				location.reload();
+				window.open('https://www.google.com')
+			}
+		}
+
+
+
+
+
+
+
 		// let years = document.querySelector('h1');
 
 		// setTimeout(dalay, 2000);
@@ -64,16 +107,16 @@
 		// 	}
 		// }
 
-		let age = prompt("Enter your age", "18");
-		let ageU = +age;
-		if (ageU % 2 == 0) {
+		// let age = prompt("Enter your age", "18");
+		// let ageU = +age;
+		// if (ageU % 2 == 0) {
 
-			alert(`Ваш вік парний: ${ageU} years.`);
-		} else {
-			ageU++;
-			alert(`Ваш вік не парний, а ми не любимо не парні числa. Тому ваш вік стане парним:   ${ageU} years.   ;)`);
-		}
-		ageU = (ageU < 18) ? alert(`If(yourAge >= 18) {то підносимо його в 3 степінь} Ваше число доступа = ${ageU ** 3}`) : alert(`If(yourAge < 18) {то підносимо його в 2 степінь} Ваше число доступа = ${ageU ** 2}`);
+		// 	alert(`Ваш вік парний: ${ageU} years.`);
+		// } else {
+		// 	ageU++;
+		// 	alert(`Ваш вік не парний, а ми не любимо не парні числa. Тому ваш вік стане парним:   ${ageU} years.   ;)`);
+		// }
+		// ageU = (ageU < 18) ? alert(`If(yourAge >= 18) {то підносимо його в 3 степінь} Ваше число доступа = ${ageU ** 3}`) : alert(`If(yourAge < 18) {то підносимо його в 2 степінь} Ваше число доступа = ${ageU ** 2}`);
 	</script>
 </body>
 
