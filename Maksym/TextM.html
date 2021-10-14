@@ -20,38 +20,78 @@
 		</div>
 	</div>
 	<script>
-		let gender = prompt("Enter your gender:", 'Female');
-		if (gender.toLowerCase() == "female") {
-			alert("Hello, You are woman")
-			let age = prompt("Please, enter your age", 18);
-			if (age > 0 && age < 18) {
-				alert("Hello, child, you have no place here")
-				location.reload();
-				window.open('https://www.google.com')
-			} else if (age > 17 && age < 26) {
-				alert("Hi, baby\nThis is my home work")
-			} else if (age > 25 && age < 101) {
-				alert("Hello, Woman\nThis is my home work")
-			} else {
-				location.reload();
-				window.open('https://www.google.com')
+
+		alert('Hello, you are my lottery player!');
+		let ageOrDate = prompt("Enter your age or date of born:", "example: 21 or 2000");
+		if (ageOrDate == null) {
+			document.location.reload();
+		} else if (ageOrDate < 18 && ageOrDate > 0 || ageOrDate > 2002 && ageOrDate < 2021) {
+			alert("Sorry but we are open for people over 18 years.")
+			document.location.reload();
+			window.open('https://www.google.com')
+		} else {
+			let arr = [20, 35, 25, 18, 21, 30, 28, 22, 29, 39, 1993, 1992, 2001, 1996, 2002, 1999, 1991, 1997, 1990, 2000];
+			for (var i = 0; i < arr.length; i++) {
+				if (arr[i] == ageOrDate) break;
 			}
-		} else if (gender.toLowerCase() == "male") {
-			alert("Hello, Broo");
-			let age = prompt("Please, enter your age", 18);
-			if (age > 0 && age < 18) {
-				alert("Hello, child, you have no place here")
-				location.reload();
-				window.open('https://www.google.com')
-			} else if (age > 17 && age < 26) {
-				alert("Hi, young\nThis is my home work")
-			} else if (age > 25 && age < 101) {
-				alert("Hello, Man\nThis is my home work")
+			if (arr[i]) {
+				alert(`My congratulations, you are the winner.\nYour lucky number is ${arr[i]}.\nLost ${arr.length - 1} numbers`);
+				let c = confirm("Want to get your prize?");
+				if (c == true) {
+					document.location.reload();
+					window.open('https://giphy.com/gifs/birthday-fuck-you-middle-finger-gift-ytwDCveyFztWxY30ac')
+				} else {
+					document.location.reload();
+					window.location.replace("https://warthunder.ru/ru/");
+				}
 			} else {
-				location.reload();
-				window.open('https://www.google.com')
+				let b = confirm(`Unfortunately, your number was not a winner(\n Meybe you see winner numbers?`);
+				if (b == true) {
+					alert(arr);
+					document.location.reload();
+				} else {
+					document.location.reload();
+					window.location.replace("https://warthunder.ru/ru/");
+				}
 			}
 		}
+
+
+
+
+
+		// let gender = prompt("Enter your gender:", 'Female');
+		// if (gender.toLowerCase() == "female") {
+		// 	alert("Hello, You are woman")
+		// 	let age = prompt("Please, enter your age", 18);
+		// 	if (age > 0 && age < 18) {
+		// 		alert("Hello, child, you have no place here")
+		// 		location.reload();
+		// 		window.open('https://www.google.com')
+		// 	} else if (age > 17 && age < 26) {
+		// 		alert("Hi, baby\nThis is my home work")
+		// 	} else if (age > 25 && age < 101) {
+		// 		alert("Hello, Woman\nThis is my home work")
+		// 	} else {
+		// 		location.reload();
+		// 		window.open('https://www.google.com')
+		// 	}
+		// } else if (gender.toLowerCase() == "male") {
+		// 	alert("Hello, Broo");
+		// 	let age = prompt("Please, enter your age", 18);
+		// 	if (age > 0 && age < 18) {
+		// 		alert("Hello, child, you have no place here")
+		// 		location.reload();
+		// 		window.open('https://www.google.com')
+		// 	} else if (age > 17 && age < 26) {
+		// 		alert("Hi, young\nThis is my home work")
+		// 	} else if (age > 25 && age < 101) {
+		// 		alert("Hello, Man\nThis is my home work")
+		// 	} else {
+		// 		location.reload();
+		// 		window.open('https://www.google.com')
+		// 	}
+		// }
 
 
 
@@ -60,11 +100,8 @@
 
 
 		// let years = document.querySelector('h1');
-
 		// setTimeout(dalay, 2000);
-
 		// var conf;
-
 		// function dalay() {
 		// 	conf = confirm("Are you over 18 years old?");
 		// 	if (conf == true) {
@@ -72,11 +109,9 @@
 		// 		question.innerHTML = "Please, write your age:";
 		// 		question.style = "text-align: center";
 		// 		years.after(question);
-
 		// 		let years1 = document.querySelector('h2');
 		// 		years1.insertAdjacentHTML('beforeEnd', `<input>`);
 		// 		years1.insertAdjacentHTML('beforeEnd', `<button>Submit</button>`);
-
 		// 		let years12 = document.querySelector('input');
 		// 		years12.style.cssText = `margin: 0 0 0px 10px;`;
 		// 		years12.setAttribute('type', 'number');
@@ -85,15 +120,11 @@
 		// 		years12.setAttribute('max', '99');
 		// 		years12.setAttribute('maxlength', '2');
 		// 		years12.setAttribute('minlength', '2');
-
 		// 		let btn = document.querySelector('button');
-
 		// 		btn.onclick = function writeYears() {
 		// 			let getYears = document.querySelector('input');
 		// 			getYears.setAttribute('id', 'in')
-
 		// 			let numberYear = document.getElementById("in").value;
-
 		// 			if (numberYear > 17 && numberYear < 100) {
 		// 				let string = "Your age is " + String(numberYear) + " years!";
 		// 				alert(string);
@@ -107,10 +138,13 @@
 		// 	}
 		// }
 
+
+
+
+
 		// let age = prompt("Enter your age", "18");
 		// let ageU = +age;
 		// if (ageU % 2 == 0) {
-
 		// 	alert(`Ваш вік парний: ${ageU} years.`);
 		// } else {
 		// 	ageU++;
