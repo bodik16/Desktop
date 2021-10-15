@@ -31,10 +31,14 @@
 			window.open('https://www.google.com')
 		} else {
 			let arr = [20, 35, 25, 18, 21, 30, 28, 22, 29, 39, 1993, 1992, 2001, 1996, 2002, 1999, 1991, 1997, 1990, 2000];
+			let check = 0;
 			for (var i = 0; i < arr.length; i++) {
-				if (arr[i] == ageOrDate) break;
+				if (arr[i] == ageOrDate) {
+					check = arr[i];
+					break;
+				}
 			}
-			if (arr[i]) {
+			if (check) {
 				alert(`My congratulations, you are the winner.\nYour lucky number is ${arr[i]}.\nLost ${arr.length - 1} numbers`);
 				let c = confirm("Want to get your prize?");
 				if (c == true) {
