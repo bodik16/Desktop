@@ -8,57 +8,97 @@
 </head>
 
 <body>
-	<h1 style="text-align: center;">Hello World__Такато діч</h1>
-	<div class="main">
-		<div class=" enterGender" style="display: flex;">
-			<h2>Please, enter your gender:</h2>
-			<input type="text" title="Please, enter your gender:" id="enterGender">
-		</div>
-		<h2>Please, enter your age:</h2>
-		<div class="enterAge" style="display: flex;">
-			<input type="text" title="Please, enter your age:" id="enterAge">
-		</div>
+	<h1 style="text-align: center;">Home Work</h1>
+	<div id="enterName" style="color: rgb(20, 20, 20); display: flex; justify-content: center; padding-top: 2px;">
+		<h2 style="margin: 0 10px;">Введіть ваше ім'я:</h2>
+	</div>
 	</div>
 	<script>
 
-		alert('Hello, you are my lottery player!');
-		let ageOrDate = prompt("Enter your age or date of born:", "example: 21 or 2000");
-		if (ageOrDate == null) {
-			document.location.reload();
-		} else if (ageOrDate < 18 && ageOrDate > 0 || ageOrDate > 2002 && ageOrDate < 2021) {
-			alert("Sorry but we are open for people over 18 years.")
-			document.location.reload();
-			window.open('https://www.google.com')
-		} else {
-			let arr = [20, 35, 25, 18, 21, 30, 28, 22, 29, 39, 1993, 1992, 2001, 1996, 2002, 1999, 1991, 1997, 1990, 2000];
-			let check = 0;
-			for (var i = 0; i < arr.length; i++) {
-				if (arr[i] == ageOrDate) {
-					check = arr[i];
-					break;
-				}
-			}
-			if (check) {
-				alert(`My congratulations, you are the winner.\nYour lucky number is ${arr[i]}.\nLost ${arr.length - 1} numbers`);
-				let c = confirm("Want to get your prize?");
-				if (c == true) {
-					document.location.reload();
-					window.open('https://giphy.com/gifs/birthday-fuck-you-middle-finger-gift-ytwDCveyFztWxY30ac')
-				} else {
-					document.location.reload();
-					window.location.replace("https://warthunder.ru/ru/");
-				}
-			} else {
-				let b = confirm(`Unfortunately, your number was not a winner(\n Meybe you see winner numbers?`);
-				if (b == true) {
-					alert(arr);
-					document.location.reload();
-				} else {
-					document.location.reload();
-					window.location.replace("https://warthunder.ru/ru/");
+		const mainDiv = document.getElementById('enterName');
+		const itemDiv = document.createElement('input');
+		itemDiv.setAttribute('type', "text");
+		itemDiv.setAttribute('maxlength', "10");
+		itemDiv.setAttribute('minlength', "3");
+		itemDiv.setAttribute('placeholder', "Макс");
+		itemDiv.setAttribute('id', "inpt");
+		mainDiv.append(itemDiv);
+		const itemButton = document.createElement('button');
+		itemButton.setAttribute('type', "submit");
+		itemButton.innerHTML = "Відправити";
+		itemButton.setAttribute('style', "margin: 0 10px ");
+		itemButton.setAttribute('id', 'btn')
+		mainDiv.append(itemButton);
+		const btn = document.getElementById('btn');
+		btn.onclick = function () {
+			const nameUser = document.getElementById('inpt').value;
+			if (Boolean(nameUser) == true) {
+				switch (nameUser.toLowerCase()) {
+					case "макс":
+					case "рекет":
+					case "ваня":
+						alert("Найсильніші!")
+						break;
+					case "міша":
+					case "аня":
+					case "вадим":
+					case "ігор":
+					case "аліна":
+					case "вітя":
+						alert("Слабаки!");
+						break;
+					case "богдан":
+						alert('Коуч!');
+						break;
+					default:
+						alert('Я вас не знаю!\nВаріанти чому ні: Ви написали ім`я на !ураїнській мові, або ви реально не звідси ;)');
+						window.open('https://mate.academy/ru/courses/frontend?utm_source=google&utm_medium=cpc&utm_campaign=gs_general_broad_ua_dktp&utm_term=онлайн%20курси%20програмування&gclid=Cj0KCQjwtrSLBhCLARIsACh6RmgfnczQHTBRttXzJkqJuNUj51tS7Wwr0075yZSzDJ54l1t_aFl--XkaAtwGEALw_wcB');
+						break;
 				}
 			}
 		}
+
+
+
+
+		// alert('Hello, you are my lottery player!');
+		// let ageOrDate = prompt("Enter your age or date of born:", "example: 21 or 2000");
+		// if (ageOrDate == null) {
+		// 	document.location.reload();
+		// } else if (ageOrDate < 18 && ageOrDate > 0 || ageOrDate > 2002 && ageOrDate < 2021) {
+		// 	alert("Sorry but we are open for people over 18 years.")
+		// 	document.location.reload();
+		// 	window.open('https://www.google.com')
+		// } else {
+		// 	let arr = [20, 35, 25, 18, 21, 30, 28, 22, 29, 39, 1993, 1992, 2001, 1996, 2002, 1999, 1991, 1997, 1990, 2000];
+		// 	let check = 0;
+		// 	for (var i = 0; i < arr.length; i++) {
+		// 		if (arr[i] == ageOrDate) {
+		// 			check = arr[i];
+		// 			break;
+		// 		}
+		// 	}
+		// 	if (check) {
+		// 		alert(`My congratulations, you are the winner.\nYour lucky number is ${arr[i]}.\nLost ${arr.length - 1} numbers`);
+		// 		let c = confirm("Want to get your prize?");
+		// 		if (c == true) {
+		// 			document.location.reload();
+		// 			window.open('https://giphy.com/gifs/birthday-fuck-you-middle-finger-gift-ytwDCveyFztWxY30ac')
+		// 		} else {
+		// 			document.location.reload();
+		// 			window.location.replace("https://warthunder.ru/ru/");
+		// 		}
+		// 	} else {
+		// 		let b = confirm(`Unfortunately, your number was not a winner(\n Meybe you see winner numbers?`);
+		// 		if (b == true) {
+		// 			alert(arr);
+		// 			document.location.reload();
+		// 		} else {
+		// 			document.location.reload();
+		// 			window.location.replace("https://warthunder.ru/ru/");
+		// 		}
+		// 	}
+		// }
 
 
 
