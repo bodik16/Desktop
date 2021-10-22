@@ -1,23 +1,212 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>DZ</title>
+	<meta charset="utf-8">
+	<title>Maksym</title>
+	<link rel="shortcut icon" href="title.png">
+	<link rel="stylesheet" href="DZ.css">
 </head>
 
 <body>
-	<div style="text-align: center;">
-		<H1>assWorld</H1>
+	<h1 style="text-align: center;">Home Work</h1>
+	<div id="enterName" style="color: rgb(20, 20, 20); display: flex; justify-content: center; padding-top: 2px;">
+		<h2 style="margin: 0 10px;">Введіть ваше ім'я:</h2>
 	</div>
-	<script src="dz.js"></script>
-	<button type="button" onClick="refreshPage()">Try again</button>
 	<script>
-		function refreshPage() {
-			window.location.reload();
+		let age22 = prompt("How old are  you?", 18);
+		function ageComporise() {
+			alert("hello, on my page!")
 		}
+		if (age22 > 17) {
+			ageComporise(age22);
+		} else {
+			alert("Your age less 18 years:(")
+			window.open('https://google.com');
+		}
+		const mainDiv = document.getElementById('enterName');
+		const itemDiv = document.createElement('input');
+		itemDiv.setAttribute('type', "text");
+		itemDiv.setAttribute('maxlength', "10");
+		itemDiv.setAttribute('minlength', "3");
+		itemDiv.setAttribute('placeholder', "Макс");
+		itemDiv.setAttribute('id', "inpt");
+		mainDiv.append(itemDiv);
+		const itemButton = document.createElement('button');
+		itemButton.setAttribute('type', "submit");
+		itemButton.innerHTML = 'Відправити';
+		itemButton.setAttribute('style', "margin: 0 10px ");
+		itemButton.setAttribute('id', 'btn')
+		mainDiv.append(itemButton);
+		const btn = document.getElementById('btn');
+		btn.onclick = function () {
+			const nameUser = document.getElementById('inpt').value;
+			if (Boolean(nameUser) == true) {
+				switch (nameUser.toLowerCase()) {
+					case "макс":
+					case "рекет":
+					case "ваня":
+						alert(`Вам ${age22} years and you are Найсильніші!`);
+						document.location.reload();
+						break;
+					case "міша":
+					case "аня":
+					case "вадим":
+					case "ігор":
+					case "аліна":
+					case "вітя":
+						alert(`Вам ${age22} years and you are Слабаки!`);
+						document.location.reload();
+						break;
+					case "богдан":
+						alert(`Вам ${age22} years and you are Коуч!`);
+						document.location.reload();
+						break;
+					default:
+						alert(`Вам ${age22} years and я вас не знаю!\nВаріанти чому ні: Ви написали ім'я на !ураїнській мові, або ви реально не звідси ;)`);
+						window.open('https://mate.academy/ru/courses/frontend?utm_source=google&utm_medium=cpc&utm_campaign=gs_general_broad_ua_dktp&utm_term=онлайн%20курси%20програмування&gclid=Cj0KCQjwtrSLBhCLARIsACh6RmgfnczQHTBRttXzJkqJuNUj51tS7Wwr0075yZSzDJ54l1t_aFl--XkaAtwGEALw_wcB');
+						break;
+				}
+			}
+		}
+
+
+
+
+		// alert('Hello, you are my lottery player!');
+		// let ageOrDate = prompt("Enter your age or date of born:", "example: 21 or 2000");
+		// if (ageOrDate == null) {
+		// 	document.location.reload();
+		// } else if (ageOrDate < 18 && ageOrDate > 0 || ageOrDate > 2002 && ageOrDate < 2021) {
+		// 	alert("Sorry but we are open for people over 18 years.")
+		// 	document.location.reload();
+		// 	window.open('https://www.google.com')
+		// } else {
+		// 	let arr = [20, 35, 25, 18, 21, 30, 28, 22, 29, 39, 1993, 1992, 2001, 1996, 2002, 1999, 1991, 1997, 1990, 2000];
+		// 	let check = 0;
+		// 	for (var i = 0; i < arr.length; i++) {
+		// 		if (arr[i] == ageOrDate) {
+		// 			check = arr[i];
+		// 			break;
+		// 		}
+		// 	}
+		// 	if (check) {
+		// 		alert(`My congratulations, you are the winner.\nYour lucky number is ${arr[i]}.\nLost ${arr.length - 1} numbers`);
+		// 		let c = confirm("Want to get your prize?");
+		// 		if (c == true) {
+		// 			document.location.reload();
+		// 			window.open('https://giphy.com/gifs/birthday-fuck-you-middle-finger-gift-ytwDCveyFztWxY30ac')
+		// 		} else {
+		// 			document.location.reload();
+		// 			window.location.replace("https://warthunder.ru/ru/");
+		// 		}
+		// 	} else {
+		// 		let b = confirm(`Unfortunately, your number was not a winner(\n Meybe you see winner numbers?`);
+		// 		if (b == true) {
+		// 			alert(arr);
+		// 			document.location.reload();
+		// 		} else {
+		// 			document.location.reload();
+		// 			window.location.replace("https://warthunder.ru/ru/");
+		// 		}
+		// 	}
+		// }
+
+
+
+
+
+		// let gender = prompt("Enter your gender:", 'Female');
+		// if (gender.toLowerCase() == "female") {
+		// 	alert("Hello, You are woman")
+		// 	let age = prompt("Please, enter your age", 18);
+		// 	if (age > 0 && age < 18) {
+		// 		alert("Hello, child, you have no place here")
+		// 		location.reload();
+		// 		window.open('https://www.google.com')
+		// 	} else if (age > 17 && age < 26) {
+		// 		alert("Hi, baby\nThis is my home work")
+		// 	} else if (age > 25 && age < 101) {
+		// 		alert("Hello, Woman\nThis is my home work")
+		// 	} else {
+		// 		location.reload();
+		// 		window.open('https://www.google.com')
+		// 	}
+		// } else if (gender.toLowerCase() == "male") {
+		// 	alert("Hello, Broo");
+		// 	let age = prompt("Please, enter your age", 18);
+		// 	if (age > 0 && age < 18) {
+		// 		alert("Hello, child, you have no place here")
+		// 		location.reload();
+		// 		window.open('https://www.google.com')
+		// 	} else if (age > 17 && age < 26) {
+		// 		alert("Hi, young\nThis is my home work")
+		// 	} else if (age > 25 && age < 101) {
+		// 		alert("Hello, Man\nThis is my home work")
+		// 	} else {
+		// 		location.reload();
+		// 		window.open('https://www.google.com')
+		// 	}
+		// }
+
+
+
+
+
+
+
+		// let years = document.querySelector('h1');
+		// setTimeout(dalay, 2000);
+		// var conf;
+		// function dalay() {
+		// 	conf = confirm("Are you over 18 years old?");
+		// 	if (conf == true) {
+		// 		let question = document.createElement('h2');
+		// 		question.innerHTML = "Please, write your age:";
+		// 		question.style = "text-align: center";
+		// 		years.after(question);
+		// 		let years1 = document.querySelector('h2');
+		// 		years1.insertAdjacentHTML('beforeEnd', `<input>`);
+		// 		years1.insertAdjacentHTML('beforeEnd', `<button>Submit</button>`);
+		// 		let years12 = document.querySelector('input');
+		// 		years12.style.cssText = `margin: 0 0 0px 10px;`;
+		// 		years12.setAttribute('type', 'number');
+		// 		years12.setAttribute('value', '18');
+		// 		years12.setAttribute('min', '18');
+		// 		years12.setAttribute('max', '99');
+		// 		years12.setAttribute('maxlength', '2');
+		// 		years12.setAttribute('minlength', '2');
+		// 		let btn = document.querySelector('button');
+		// 		btn.onclick = function writeYears() {
+		// 			let getYears = document.querySelector('input');
+		// 			getYears.setAttribute('id', 'in')
+		// 			let numberYear = document.getElementById("in").value;
+		// 			if (numberYear > 17 && numberYear < 100) {
+		// 				let string = "Your age is " + String(numberYear) + " years!";
+		// 				alert(string);
+		// 			} else {
+		// 				getYears.value = 18;
+		// 				alert("Age is not acceptable, please try again")
+		// 			}
+		// 		}
+		// 	} else {
+		// 		window.location.href = "https://google.com"
+		// 	}
+		// }
+
+
+
+
+
+		// let age = prompt("Enter your age", "18");
+		// let ageU = +age;
+		// if (ageU % 2 == 0) {
+		// 	alert(`Ваш вік парний: ${ageU} years.`);
+		// } else {
+		// 	ageU++;
+		// 	alert(`Ваш вік не парний, а ми не любимо не парні числa. Тому ваш вік стане парним:   ${ageU} years.   ;)`);
+		// }
+		// ageU = (ageU < 18) ? alert(`If(yourAge >= 18) {то підносимо його в 3 степінь} Ваше число доступа = ${ageU ** 3}`) : alert(`If(yourAge < 18) {то підносимо його в 2 степінь} Ваше число доступа = ${ageU ** 2}`);
 	</script>
 </body>
 

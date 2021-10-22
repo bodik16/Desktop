@@ -1,0 +1,142 @@
+/* * {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,
+:active {
+	outline: none;
+}
+a:focus,
+a:active {
+	outline: none;
+}
+nav,
+footer,
+header,
+aside {
+	display: block;
+}
+html,
+body {
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,
+button,
+textarea {
+	font-family: inherit;
+}
+input::-ms-clear {
+	display: none;
+}
+button {
+	cursor: pointer;
+}
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+ul li {
+	list-style: none;
+}
+img {
+	vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: inherit;
+} */
+
+.mainH1 {
+	font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+	color: black;
+	padding: 3px;
+	text-align: center;
+	font-size: 40px;
+}
+body {
+	background-image: linear-gradient(
+		to right bottom,
+		#a84448,
+		#a64360,
+		#9c4777,
+		#89508a,
+		#705998,
+		#62579d,
+		#4e56a2,
+		#3256a6,
+		#274baa,
+		#233eac,
+		#282fac,
+		#3219aa
+	);
+}
+
+.pageBorder {
+	display: flex;
+	margin: 5px;
+	padding: 2px;
+	height: 500px;
+	border: 5px solid rgb(12, 200, 121);
+}
+/* .img {
+	width: 250px;
+} */
+span {
+	color: rgb(31, 31, 255);
+	text-shadow: 2px 1px 3px rgb(0, 0, 0);
+}
+h2 {
+	text-align: center;
+	margin: 2px;
+	font-size: 35px;
+}
+.pLorem50 {
+	margin: 3px 3px;
+	font-size: 20px;
+	font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+.menu {
+	display: inline-block;
+}
+.menu._active .menu__list {
+	display: block;
+}
+.menu._active .menu__button span:first-child {
+	display: none;
+}
+.menu._active .menu__button span:last-child {
+	display: block;
+}
+.menu__button span:first-child {
+	display: block;
+}
+.menu__button span:first-child {
+	display: none;
+}
