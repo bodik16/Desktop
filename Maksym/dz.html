@@ -14,6 +14,16 @@
 		<h2 style="margin: 0 10px;">Введіть ваше ім'я:</h2>
 	</div>
 	<script>
+		let age22 = prompt("How old are  you?", 18);
+		function ageComporise() {
+			alert("hello, on my page!")
+		}
+		if (age22 > 17) {
+			ageComporise(age22);
+		} else {
+			alert("Your age less 18 years:(")
+			window.open('https://google.com');
+		}
 		const mainDiv = document.getElementById('enterName');
 		const itemDiv = document.createElement('input');
 		itemDiv.setAttribute('type', "text");
@@ -24,7 +34,7 @@
 		mainDiv.append(itemDiv);
 		const itemButton = document.createElement('button');
 		itemButton.setAttribute('type', "submit");
-		itemButton.innerHTML = "Відправити";
+		itemButton.innerHTML = 'Відправити';
 		itemButton.setAttribute('style', "margin: 0 10px ");
 		itemButton.setAttribute('id', 'btn')
 		mainDiv.append(itemButton);
@@ -36,7 +46,8 @@
 					case "макс":
 					case "рекет":
 					case "ваня":
-						alert("Найсильніші!")
+						alert(`Вам ${age22} years and you are Найсильніші!`);
+						document.location.reload();
 						break;
 					case "міша":
 					case "аня":
@@ -44,13 +55,15 @@
 					case "ігор":
 					case "аліна":
 					case "вітя":
-						alert("Слабаки!");
+						alert(`Вам ${age22} years and you are Слабаки!`);
+						document.location.reload();
 						break;
 					case "богдан":
-						alert('Коуч!');
+						alert(`Вам ${age22} years and you are Коуч!`);
+						document.location.reload();
 						break;
 					default:
-						alert('Я вас не знаю!\nВаріанти чому ні: Ви написали ім`я на !ураїнській мові, або ви реально не звідси ;)');
+						alert(`Вам ${age22} years and я вас не знаю!\nВаріанти чому ні: Ви написали ім'я на !ураїнській мові, або ви реально не звідси ;)`);
 						window.open('https://mate.academy/ru/courses/frontend?utm_source=google&utm_medium=cpc&utm_campaign=gs_general_broad_ua_dktp&utm_term=онлайн%20курси%20програмування&gclid=Cj0KCQjwtrSLBhCLARIsACh6RmgfnczQHTBRttXzJkqJuNUj51tS7Wwr0075yZSzDJ54l1t_aFl--XkaAtwGEALw_wcB');
 						break;
 				}
