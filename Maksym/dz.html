@@ -38,37 +38,32 @@
 		itemButton.setAttribute('style', "margin: 0 10px ");
 		itemButton.setAttribute('id', 'btn')
 		mainDiv.append(itemButton);
+
+		function permision(nameU) {
+			alert(`Hello, ${nameU}! you are stay in Найсильніші Team`)
+		}
+
 		const btn = document.getElementById('btn');
 		btn.onclick = function () {
 			const nameUser = document.getElementById('inpt').value;
 			if (Boolean(nameUser) == true) {
-				switch (nameUser.toLowerCase()) {
-					case "макс":
-					case "рекет":
-					case "ваня":
-						alert(`Вам ${age22} years and you are Найсильніші!`);
-						document.location.reload();
-						break;
-					case "міша":
-					case "аня":
-					case "вадим":
-					case "ігор":
-					case "аліна":
-					case "вітя":
-						alert(`Вам ${age22} years and you are Слабаки!`);
-						document.location.reload();
-						break;
-					case "богдан":
-						alert(`Вам ${age22} years and you are Коуч!`);
-						document.location.reload();
-						break;
-					default:
-						alert(`Вам ${age22} years and я вас не знаю!\nВаріанти чому ні: Ви написали ім'я на !ураїнській мові, або ви реально не звідси ;)`);
-						window.open('https://mate.academy/ru/courses/frontend?utm_source=google&utm_medium=cpc&utm_campaign=gs_general_broad_ua_dktp&utm_term=онлайн%20курси%20програмування&gclid=Cj0KCQjwtrSLBhCLARIsACh6RmgfnczQHTBRttXzJkqJuNUj51tS7Wwr0075yZSzDJ54l1t_aFl--XkaAtwGEALw_wcB');
-						break;
+				let mus = ["максим", "богдан", "рекет", "ваня"];
+				end: for (let i = 0; i < mus.length; i++) {
+					if (mus[i] == nameUser.toLowerCase()) {
+						permision(nameUser);
+						let a = 0;
+						a++;
+						break end;
+					} else {
+						alert(`You ${nameUser} not stay this team.`);
+						break end;
+					}
+
 				}
+
 			}
 		}
+
 
 
 
