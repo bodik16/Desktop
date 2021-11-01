@@ -12,59 +12,117 @@
 	<h1 style="text-align: center;">Home Work</h1>
 	<div id="enterName" style="color: rgb(20, 20, 20); display: flex; justify-content: center; padding-top: 2px;">
 		<h2 style="margin: 0 10px;">Введіть ваше ім'я:</h2>
+		<form action="DZ.html" name="searchform" method="get" id="frm">
+			<input type="text" id="inptOne" name="searchstring" size="20" value="Максим" style="margin: 5px auto;">
+		</form>
 	</div>
+	<div class="a" style="text-align: center;">
+		<a onclick="submitForm()" href="#"
+			style="margin-top: 5px;font-size: 20px; border: 1px solid black; border-radius: 4px; padding: 2px; text-decoration: underline; display: none;">Submit,it
+			is not button</a>
+	</div>
+
 	<script>
-		let age22 = prompt("How old are  you?", 18);
-		function ageComporise() {
-			alert("hello, on my page!")
-		}
-		if (age22 > 17) {
-			ageComporise(age22);
-		} else {
-			alert("Your age less 18 years:(")
-			window.open('https://google.com');
-		}
-		const mainDiv = document.getElementById('enterName');
-		const itemDiv = document.createElement('input');
-		itemDiv.setAttribute('type', "text");
-		itemDiv.setAttribute('maxlength', "10");
-		itemDiv.setAttribute('minlength', "3");
-		itemDiv.setAttribute('placeholder', "Макс");
-		itemDiv.setAttribute('id', "inpt");
-		mainDiv.append(itemDiv);
-		const itemButton = document.createElement('button');
-		itemButton.setAttribute('type', "submit");
-		itemButton.innerHTML = 'Відправити';
-		itemButton.setAttribute('style', "margin: 0 10px ");
-		itemButton.setAttribute('id', 'btn')
-		mainDiv.append(itemButton);
-
-		function permision(nameU) {
-			alert(`Hello, ${nameU}! you are stay in Найсильніші Team`)
-		}
-
-		const btn = document.getElementById('btn');
-		btn.onclick = function () {
-			const nameUser = document.getElementById('inpt').value;
-			if (Boolean(nameUser) == true) {
-				let mus = ["максим", "богдан", "рекет", "ваня"];
-				end: for (let i = 0; i < mus.length; i++) {
-					if (mus[i] == nameUser.toLowerCase()) {
-						permision(nameUser);
-						let a = 0;
-						a++;
-						break end;
+		let musNames = ["максим", "богдан", "ваня", "сашик"];
+		function submitForm(one) {
+			if (Boolean(one) == true) {
+				let nameForCheck = prompt('Enter name to check for availability', "Богдан");
+				for (var i = 0; i < musNames.length; i++) {
+					if (musNames[i] == one.toLowerCase()) {
+						alert("This name is here");
+						break;
 					} else {
-						alert(`You ${nameUser} not stay this team.`);
-						break end;
+						alert("This name is NOT here");
+						break;
 					}
+				};
+			} else {
+				window.open('http://google.com')
+				document.location.reload();
+			}
+		}
 
-				}
-
+		document.getElementById('inptOne').onkeypress = function (event) {
+			if (event.keyCode == 13) {
+				var getName = document.getElementById('inptOne').value;
+				for (var i = 0; i < musNames.length; i++) {
+					if (musNames[i] == getName.toLowerCase()) {
+						alert(`this name already is here: ${musNames}`);
+						break;
+					} else {
+						musNames.push(getName.toLowerCase());
+						alert(`your name added: ${musNames}`);
+						break;
+					}
+				};
+				submitForm(getName);
 			}
 		}
 
 
+
+		// let age22 = prompt("How old are  you?", 18);
+
+		// function ageComporise() {
+		// 	alert("hello, on my page!")
+		// }
+
+		// if (age22 > 17) {
+		// 	ageComporise();
+		// } else {
+		// 	alert("Your age less 18 years:(")
+		// 	window.open('https://google.com');
+		// }
+
+		// const mainDiv = document.getElementById('enterName');
+		// const itemDiv = document.createElement('input');
+		// itemDiv.setAttribute('type', "text");
+		// itemDiv.setAttribute('maxlength', "10");
+		// itemDiv.setAttribute('minlength', "3");
+		// itemDiv.setAttribute('placeholder', "Макс");
+		// itemDiv.setAttribute('id', "inpt");
+		// mainDiv.append(itemDiv);
+		// const itemButton = document.createElement('button');
+		// itemButton.setAttribute('type', "submit");
+		// itemButton.innerHTML = 'Відправити';
+		// itemButton.setAttribute('style', "margin: 0 10px ");
+		// itemButton.setAttribute('id', 'btn')
+		// //itemButton.setAttribute('style', 'visibility: hidden;');
+		// mainDiv.append(itemButton);
+
+		// function permision(nameU) {
+		// 	alert(`Hello, ${ nameU } !you are stay in Найсильніші Team`)
+		// }
+
+		// function submitForm() {
+		// 		if (Boolean(nameUser) == true) {
+		// 			let mus = ["максим", "богдан", "рекет", "ваня"];
+		// 			end: for (let i = 0; i < mus.length; i++) {
+		// 				if (mus[i] == nameUser.toLowerCase()) {
+		// 					permision(nameUser);
+		// 					
+		// 					break end;
+		// 				} else {
+		// 					alert(`You '${nameUser}' not stay this team.`);
+		// 					break end;
+		// 				}
+		// 			}
+		// 		}
+		// 	}
+
+
+		// const btn = document.getElementById('btn');
+
+		// // btn.onclick = function inSubmit() {
+		// const nameUser = document.getElementById('inpt').value;
+		// console.log(`1${ nameUser } `);
+		// const nameNew = document.getElementById('inpt').onkeypress = function (event) {
+		// 	if (event.keyCode == 13) {
+		// 		submitForm();
+		// 	}
+
+		// }
+		//}
 
 
 
@@ -86,7 +144,7 @@
 		// 		}
 		// 	}
 		// 	if (check) {
-		// 		alert(`My congratulations, you are the winner.\nYour lucky number is ${arr[i]}.\nLost ${arr.length - 1} numbers`);
+		// 		alert(`My congratulations, you are the winner.\nYour lucky number is ${ arr[i] }.\nLost ${ arr.length - 1 } numbers`);
 		// 		let c = confirm("Want to get your prize?");
 		// 		if (c == true) {
 		// 			document.location.reload();
@@ -96,7 +154,7 @@
 		// 			window.location.replace("https://warthunder.ru/ru/");
 		// 		}
 		// 	} else {
-		// 		let b = confirm(`Unfortunately, your number was not a winner(\n Meybe you see winner numbers?`);
+		// 		let b = confirm(`Unfortunately, your number was not a winner(\n Meybe you see winner numbers ? `);
 		// 		if (b == true) {
 		// 			alert(arr);
 		// 			document.location.reload();
@@ -161,10 +219,10 @@
 		// 		question.style = "text-align: center";
 		// 		years.after(question);
 		// 		let years1 = document.querySelector('h2');
-		// 		years1.insertAdjacentHTML('beforeEnd', `<input>`);
-		// 		years1.insertAdjacentHTML('beforeEnd', `<button>Submit</button>`);
+		// 		years1.insertAdjacentHTML('beforeEnd', `< input > `);
+		// 		years1.insertAdjacentHTML('beforeEnd', `< button > Submit</ > `);
 		// 		let years12 = document.querySelector('input');
-		// 		years12.style.cssText = `margin: 0 0 0px 10px;`;
+		// 		years12.style.cssText = `margin: 0 0 0px 10px; `;
 		// 		years12.setAttribute('type', 'number');
 		// 		years12.setAttribute('value', '18');
 		// 		years12.setAttribute('min', '18');
@@ -196,12 +254,12 @@
 		// let age = prompt("Enter your age", "18");
 		// let ageU = +age;
 		// if (ageU % 2 == 0) {
-		// 	alert(`Ваш вік парний: ${ageU} years.`);
+		// 	alert(`Ваш вік парний: ${ ageU } years.`);
 		// } else {
 		// 	ageU++;
-		// 	alert(`Ваш вік не парний, а ми не любимо не парні числa. Тому ваш вік стане парним:   ${ageU} years.   ;)`);
+		// 	alert(`Ваш вік не парний, а ми не любимо не парні числa.Тому ваш вік стане парним:   ${ ageU } years.   ;)`);
 		// }
-		// ageU = (ageU < 18) ? alert(`If(yourAge >= 18) {то підносимо його в 3 степінь} Ваше число доступа = ${ageU ** 3}`) : alert(`If(yourAge < 18) {то підносимо його в 2 степінь} Ваше число доступа = ${ageU ** 2}`);
+		// ageU = (ageU < 18) ? alert(`If(yourAge >= 18) {то підносимо його в 3 степінь } Ваше число доступа = ${ ageU ** 3 } `) : alert(`If(yourAge < 18) {то підносимо його в 2 степінь } Ваше число доступа = ${ ageU ** 2 }`);
 	</script>
 </body>
 
