@@ -27,13 +27,17 @@
 		function submitForm(one) {
 			if (Boolean(one) == true) {
 				let nameForCheck = prompt('Enter name to check for availability', "Богдан");
+				let a = 0;
 				for (var i = 0; i < musNames.length; i++) {
-					if (musNames[i] == one.toLowerCase()) {
+					if (musNames[i] == nameForCheck.toLowerCase()) {
 						alert("This name is here");
 						break;
-					} else {
-						alert("This name is NOT here");
-						break;
+					}
+					else {
+						a++;
+						if (a == musNames.length - 1) {
+							alert("This name is NOT here");
+						}
 					}
 				};
 			} else {
