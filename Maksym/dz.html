@@ -23,6 +23,7 @@
 	</div>
 
 	<script>
+<<<<<<< HEAD
 		//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.............HW.................<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 		// let user = {};
 		// user.name = "John";
@@ -132,6 +133,41 @@
 		// 		submitForm(getName);
 		// 	}
 		// }
+=======
+		let musNames = ["максим", "богдан", "ваня", "сашик"];
+		function submitForm(one) {
+			if (Boolean(one) == true) {
+				let nameForCheck = prompt('Enter name to check for availability', "Богдан");
+				console.log(nameForCheck);
+				for (var i = 0; i < musNames.length; i++) {
+					if (musNames[i] == nameForCheck.toLowerCase()) {
+						alert("This name is here");
+						break;
+					}
+				};
+			} else {
+				window.open('http://google.com')
+				document.location.reload();
+			}
+		}
+
+		document.getElementById('inptOne').onkeypress = function (event) {
+			if (event.keyCode == 13) {
+				var getName = document.getElementById('inptOne').value;
+				for (var i = 0; i < musNames.length; i++) {
+					if (musNames[i] == getName.toLowerCase()) {
+						alert(`this name already is here: ${musNames}`);
+						break;
+					} else {
+						musNames.push(getName.toLowerCase());
+						alert(`your name added: ${musNames}`);
+						break;
+					}
+				};
+				submitForm(getName);
+			}
+		}
+>>>>>>> 43a884398b2c3897f2625b073cb6e6bec4fd408c
 
 
 
