@@ -9,33 +9,146 @@
 </head>
 <body>
 <script>
-    let g = prompt("1 або 2");
-    if (g == 1) {
-        let x = prompt("Введи число")
-        let y = prompt("І ще раз введи число меньше за попереднє :)")
-        if (y > x) {
-            window.location.href = "https://i.pinimg.com/originals/73/4d/95/734d957918a16ff96d7b696c45efc719.jpg";
-        } else {
-            let z = x % y;
-            alert('Якщо поділити ' + x + ' на ' + y + ' то остача буде: ' + z)
+    let user = {
+         name: 'Семен',
+         surname: 'Галош'
+      }
+ //     for(let key in user) {
+ //         alert(user[key]);
+ //     }
+    user.name = 'Чобот';
+ //     for(let key in user) {
+ //         alert(user[key]);
+ //     }
+    delete user.name;
+      for(let key in user) {
+          alert(user[key]);
+      }
+  alert(user.isEmpty === !undefined);
+
+     let salaries = {
+            coffee: 20,
+            milk: 2,
+            cake: 25
+     }
+ let sum = 0;
+ for (let key in salaries) {
+     sum += salaries[key];
+ }
+ alert(sum)
+     // let sum = 0;
+     // if (salaries.isEmpty === undefined) {
+     //     sum = salaries.John + salaries.Ann + salaries.Pete;
+     // }
+     // alert(sum);
+     let menu = {
+         width: 300,
+         height: 400,
+         title: "My menu"
+     }
+    for (let key in menu) {
+        if (typeof menu[key] == 'number'){
+            menu[key] *= 2;
         }
-    } else if (g == 2 ) {
-        let a = confirm('Щас буде магія. Віриш?')
-        if (a == false) {
-            window.location.href = "https://www.meme-arsenal.com/memes/d7298271035416b427973e69759d0fd4.jpg";
-        } else if (a == true) {
-            alert('Вибери три числа які стоять поряд від 1 до 20');
-            let b = prompt('Введи їх суму');
-            let first = b / 3;
-            let center = first;
-            let left = --center;
-            let write = 2 + center;
-            alert("Ти вибрав числа  " + left + "   " + first + "   " + write)
-        }
-    } else {
-        window.location.href = "http://memesmix.net/media/created/0htoga.jpg";
+        alert(menu[key]);
     }
-</script>
+
+
+
+    // let man =  {
+    //     name: "Христофор",
+    //     age: 21,
+    //     "last name": "Гал"
+    //
+    // }
+    // alert(man.name+ ' ' + 'and him' + ' '+ man.age + man['last name'])
+    // let key = prompt("Що ви хочете знати про man",);
+    // alert(man[key]);
+    // let g = prompt("1 або 2");
+    // if (g == 1) {
+    //     let x = prompt("Введи число")
+    //     let y = prompt("І ще раз введи число меньше за попереднє :)")
+    //     if (y > x) {
+    //         window.location.href = "https://i.pinimg.com/originals/73/4d/95/734d957918a16ff96d7b696c45efc719.jpg";
+    //     } else {
+    //         let z = x % y;
+    //         alert('Якщо поділити ' + x + ' на ' + y + ' то остача буде: ' + z)
+    //     }
+    // } else if (g == 2 ) {
+    //     let a = confirm('Щас буде магія. Віриш?')
+    //     if (a == false) {
+    //         window.location.href = "https://www.meme-arsenal.com/memes/d7298271035416b427973e69759d0fd4.jpg";
+    //     } else if (a == true) {
+    //         alert('Вибери три числа які стоять поряд від 1 до 20');
+    //         let b = prompt('Введи їх суму');
+    //         let first = b / 3;
+    //         let center = first;
+    //         let left = --center;
+    //         let write = 2 + center;
+    //         alert("Ти вибрав числа  " + left + "   " + first + "   " + write)
+    //     }
+    // } else {
+    //     window.location.href = "http://memesmix.net/media/created/0htoga.jpg";
+    // }
+    //console.log("" && null);
+    // let a = prompt("Введіть імя",);
+    // switch (a) {
+    //         case 'Рекет':
+    //         case 'Ваня':
+    //         case 'Макс':
+    //     alert('Сильніші');
+    //     break;
+    //     case 'Міша':
+    //     case  'Аня':
+    //     case  'Вадим':
+    //     case  'Ігор':
+    //     case  'Аліна':
+    //     case  'Вітя':
+    //         alert('Слабаки');
+    //     break;
+    //     case 'Богдан':
+    //         alert('Коуч');
+    //     break;
+    //     default:
+    //         alert('Тут таких немає');
+    // }
+
+    // let name = ['Вася','Ваня','Бодя','Макс','Рекет'];
+    // let age = prompt("Введіть вік");
+    // let year;
+    // if (age < 18) {
+    //     year = function() {
+    //         alert ('litle');
+    //     };
+    // } else {
+    //     year = function() {
+    //      alert('Проходь');
+    //     };
+    // }
+    // year();
+    // let a = year;
+    // a();
+    // if (age > 17) {
+    //     let arrname = prompt("Введіть імя");
+    //     let if_exist = false;
+    //     for (let i = 0; i < name.length; i++) {
+    //         if (arrname == name[i]) {
+    //             if_exist = true;
+    //             break;
+    //         }
+    //     }
+    //     if (if_exist) {
+    //         alert("yes");
+    //     } else {
+    //         alert('no');
+    //     }
+    // }
+    // name.push('Міша');
+    // for(let i = 0; i < name.length; i++) {
+    //     let a = name[i]
+    //     alert(a)
+    // }
+    </script>
 
 </body>
 </html>
