@@ -23,6 +23,115 @@
 	</div>
 
 	<script>
+		//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.............HW.................<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+		// let user = {};
+		// user.name = "John";
+		// user.surname = "Smith";
+		// user.name = "Pete";
+		// delete user.name;
+
+
+
+		// let schedule = {};
+		// // schedule.user = 'max';
+		// function isEmpty(obj) {
+		// 	for (let key in obj) {
+		// 		return false;//if is key or property in the obj
+		// 	}
+		// 	return true;//if is not key or property in the obj
+		// }
+		// alert(isEmpty(schedule))
+
+
+
+		// let salaries = {
+		// 	John: 100,
+		// 	Ann: 160,
+		// 	Pete: 130
+		// }
+		// let sum = 0;
+		// for (let prop in salaries) {
+		// 	sum += salaries[prop];
+		// }
+		// alert(`suma: ${sum}`);
+
+
+
+		// let menu = {
+		// 	width: 200,
+		// 	height: 300,
+		// 	title: "My menu"
+		// };
+		// multiplyNumeric(menu);
+		// function multiplyNumeric(menu) {
+		// 	for (let key in menu) {
+		// 		if (typeof (menu[key]) == "number") {
+		// 			menu[key] *= 2;
+		// 		}
+		// 	}
+		// 	console.log(menu);
+		// }
+		//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.............HW.................<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		// let musNames = ["максим", "богдан", "ваня", "сашик"];
+		// function submitForm(one) {
+		// 	if (Boolean(one) == true) {
+		// 		let nameForCheck = prompt('Enter name to check for availability', "Богдан");
+		// 		let a = 0;
+		// 		for (var i = 0; i < musNames.length; i++) {
+		// 			if (musNames[i] == nameForCheck.toLowerCase()) {
+		// 				alert("This name is here");
+		// 				break;
+		// 			}
+		// 			else {
+		// 				a++;
+		// 				if (a == musNames.length - 1) {
+		// 					alert("This name is NOT here");
+		// 				}
+		// 			}
+		// 		};
+		// 	} else {
+		// 		window.open('http://google.com')
+		// 		document.location.reload();
+		// 	}
+		// }
+
+		// document.getElementById('inptOne').onkeypress = function (event) {
+		// 	if (event.keyCode == 13) {
+		// 		var getName = document.getElementById('inptOne').value;
+		// 		for (var i = 0; i < musNames.length; i++) {
+		// 			if (musNames[i] == getName.toLowerCase()) {
+		// 				alert(`this name already is here: ${musNames}`);
+		// 				break;
+		// 			} else {
+		// 				musNames.push(getName.toLowerCase());
+		// 				alert(`your name added: ${musNames}`);
+		// 				break;
+		// 			}
+		// 		};
+		// 		submitForm(getName);
+		// 	}
+		// }
 		let musNames = ["максим", "богдан", "ваня", "сашик"];
 		function submitForm(one) {
 			if (Boolean(one) == true) {
@@ -56,7 +165,48 @@
 				submitForm(getName);
 			}
 		}
+		//Object.assign(where, that, ..., that);
 
+		let mainObj = {
+			name: "Name1",
+			years: 20,
+			male: "Male",
+			obj11: "undefined",
+		}
+		let copymainObj = mainObj;
+		mainObj.newKey = "newValue";
+		console.log("Скопійований:");
+		console.log(mainObj);
+		console.log("Копія:");
+		console.log(copymainObj);
+
+		let cloneMainObj = {};
+		for (let key in mainObj) {
+			cloneMainObj[key] = mainObj[key];
+		}
+		cloneMainObj.newKey1 = "newValue1";
+		console.log("Клон mainObj:");
+		console.log(cloneMainObj);
+
+
+		let obj1 = {
+			gay: false,
+			"length cock": 15,
+			parents: ["dad", "mom", "sister"],
+		}
+		let obj2 = {
+			likesport: true,
+			"length penis": 10,
+			siblings: ["Peter", "Youstaff"],
+		}
+		let obj3 = {
+			football: 110,
+			"rip skin": true,
+			area: ["asd", "adsa", "asdar"],
+		}
+		Object.assign(mainObj, obj1, obj2, obj3);
+		console.log("Великий mainObj:");
+		console.log(mainObj);
 
 
 		// let age22 = prompt("How old are  you?", 18);
@@ -89,7 +239,7 @@
 		// mainDiv.append(itemButton);
 
 		// function permision(nameU) {
-		// 	alert(`Hello, ${ nameU } !you are stay in Найсильніші Team`)
+		// 	alert(`Hello, ${ nameU }!you are stay in Найсильніші Team`)
 		// }
 
 		// function submitForm() {
