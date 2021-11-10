@@ -9,49 +9,84 @@
 </head>
 <body>
 <script>
-    let user = {
-         name: 'Семен',
-         surname: 'Галош'
-      }
- //     for(let key in user) {
- //         alert(user[key]);
- //     }
-    user.name = 'Чобот';
- //     for(let key in user) {
- //         alert(user[key]);
- //     }
-    delete user.name;
-      for(let key in user) {
-          alert(user[key]);
-      }
-  alert(user.isEmpty === !undefined);
-
-     let salaries = {
-            coffee: 20,
-            milk: 2,
-            cake: 25
-     }
- let sum = 0;
- for (let key in salaries)  {
-     sum += salaries[key];
- }
- alert(sum)
-     // let sum = 0;
-     // if (salaries.isEmpty === undefined) {
-     //     sum = salaries.John + salaries.Ann + salaries.Pete;
-     // }
-     // alert(sum);
-     let menu = {
-         width: 300,
-         height: 400,
-         title: "My menu"
-     }
-    for (let key in menu) {
-        if (typeof menu[key] == 'number'){
-            menu[key] *= 2;
-        }
-        alert(menu[key]);
+    let cat = {
+        nickname: 'Сарделька',
+        breed: 'Тойбоб',
     }
+    let dog = {
+        nickname: 'Кракен',
+        breed: 'Хаски',
+        age: 2
+    }
+    let elephant = {};
+    for (let key in cat) {
+       elephant[key] = cat[key];
+    }
+    elephant.nickname = 'Тузік';
+    for (let key in elephant) {
+        alert(elephant[key]);
+    }
+    let pig = {
+        nickname: 'Шашлик',
+        breed: 'Домашня свиня',
+        masa: 90
+    }
+    let mouse = {
+        nickname:'мала',
+        breed: 'Зеброва миш',
+        color: 'Сіра'
+    }
+    let animals = {};
+    Object.assign(animals, cat, dog, pig, mouse, elephant);
+    for (let key1 in animals) {
+        alert(animals[key1]);
+    }
+
+ //    let user = {
+ //         name: 'Семен',
+ //         surname: 'Галош',
+ //        isEmpty: 4
+ //      }
+ // //     for(let key in user) {
+ // //         alert(user[key]);
+ // //     }
+ //    user.name = 'Чобот';
+ // //     for(let key in user) {
+ // //         alert(user[key]);
+ // //     }
+ //    delete user.name;
+ //      for(let key in user) {
+ //          alert(user[key]);
+ //      }
+ //  alert(user.isEmptyr === undefined);
+ //
+ //     let salaries = {
+ //            coffee: 20,
+ //            milk: 2,
+ //            cake: 25
+ //     }
+ // let sum = 0;
+ // for (let key in salaries)  {
+ //     sum += salaries[key];
+ // }
+ // alert(sum)
+ //     // let sum = 0;
+ //     // if (salaries.isEmpty === undefined) {
+ //     //     sum = salaries.John + salaries.Ann + salaries.Pete;
+ //     // }
+ //     // alert(sum);
+ //     let menu = {
+ //         width: 300,
+ //         height: 400,
+ //         title: {one: 1, two: 2, three: 3, test:[1,2,3]}
+ //     }
+ // alert(menu.title.test[1]);
+ //    for (let key in menu) {
+ //        if (typeof menu[key] == 'number'){
+ //            menu[key] = menu[key]*2;
+ //        }
+ //        alert(menu[key]);
+ //    }
 
 
 

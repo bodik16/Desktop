@@ -165,8 +165,48 @@
 				submitForm(getName);
 			}
 		}
+		//Object.assign(where, that, ..., that);
+
+		let mainObj = {
+			name: "Name1",
+			years: 20,
+			male: "Male",
+			obj11: "undefined",
+		}
+		let copymainObj = mainObj;
+		mainObj.newKey = "newValue";
+		console.log("Скопійований:");
+		console.log(mainObj);
+		console.log("Копія:");
+		console.log(copymainObj);
+
+		let cloneMainObj = {};
+		for (let key in mainObj) {
+			cloneMainObj[key] = mainObj[key];
+		}
+		cloneMainObj.newKey1 = "newValue1";
+		console.log("Клон mainObj:");
+		console.log(cloneMainObj);
 
 
+		let obj1 = {
+			gay: false,
+			"length cock": 15,
+			parents: ["dad", "mom", "sister"],
+		}
+		let obj2 = {
+			likesport: true,
+			"length penis": 10,
+			siblings: ["Peter", "Youstaff"],
+		}
+		let obj3 = {
+			football: 110,
+			"rip skin": true,
+			area: ["asd", "adsa", "asdar"],
+		}
+		Object.assign(mainObj, obj1, obj2, obj3);
+		console.log("Великий mainObj:");
+		console.log(mainObj);
 
 
 		// let age22 = prompt("How old are  you?", 18);
@@ -199,7 +239,7 @@
 		// mainDiv.append(itemButton);
 
 		// function permision(nameU) {
-		// 	alert(`Hello, ${ nameU } !you are stay in Найсильніші Team`)
+		// 	alert(`Hello, ${ nameU }!you are stay in Найсильніші Team`)
 		// }
 
 		// function submitForm() {
