@@ -3,3 +3,23 @@
 	left: 50%;
 	right: 50%;
 }
+option {
+	font-size: 25px;
+}
+#selector {
+	margin: 0 1px;
+	font-size: 40px;
+	border: 0;
+}
+h3 {
+	font-size: 50px;
+	margin: 3px 8px;
+}
+.divCalc {
+	justify-content: center;
+}
+.inpt {
+	font-size: 50px;
+	width: 75px;
+	margin: 2px 5px;
+}
