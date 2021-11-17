@@ -9,38 +9,66 @@
 </head>
 <body>
 <script>
-    let cat = {
-        nickname: 'Сарделька',
-        breed: 'Тойбоб',
-    }
-    let dog = {
-        nickname: 'Кракен',
-        breed: 'Хаски',
-        age: 2
-    }
-    let elephant = {};
-    for (let key in cat) {
-       elephant[key] = cat[key];
-    }
-    elephant.nickname = 'Тузік';
-    for (let key in elephant) {
-        alert(elephant[key]);
-    }
-    let pig = {
-        nickname: 'Шашлик',
-        breed: 'Домашня свиня',
-        masa: 90
-    }
-    let mouse = {
-        nickname:'мала',
-        breed: 'Зеброва миш',
-        color: 'Сіра'
-    }
-    let animals = {};
-    Object.assign(animals, cat, dog, pig, mouse, elephant);
-    for (let key1 in animals) {
-        alert(animals[key1]);
-    }
+let calculator = {
+    read() {
+        this.a = prompt('Введіть а',0);
+        this.b = prompt('Введіть b',0);
+},
+    sum() {
+        return this.a + this.b;
+},
+    mul () {
+        return this.a * this.b;
+}
+
+};
+calculator.read();
+alert( calculator.sum() );
+alert( calculator.mul() );
+
+
+
+
+
+
+
+
+
+
+
+
+    // let cat = {
+    //     nickname: 'Сарделька',
+    //     breed: 'Тойбоб',
+    // }
+    // let dog = {
+    //     nickname: 'Кракен',
+    //     breed: 'Хаски',
+    //     age: 2
+    // }
+    // let elephant = {};
+    // for (let key in cat) {
+    //    elephant[key] = cat[key];
+    // }
+    // elephant.nickname = 'Тузік';
+    // for (let key in elephant) {
+    //     alert(elephant[key]);
+    // }
+    // let pig = {
+    //     nickname: 'Шашлик',
+    //     breed: 'Домашня свиня',
+    //     masa: 90
+    // }
+    // let mouse = {
+    //     nickname:'мала',
+    //     breed: 'Зеброва миш',
+    //     color: 'Сіра'
+    // }
+    // let animals = {};
+    // Object.assign(animals, cat, dog, pig, mouse, elephant);
+    // for (let key1 in animals) {
+    //     alert(animals[key1]);
+    // }
 
  //    let user = {
  //         name: 'Семен',
