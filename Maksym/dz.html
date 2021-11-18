@@ -3,7 +3,6 @@
 <head>
 	<meta charset="utf-8">
 	<title>Maksym</title>
-	<link rel="shortcut icon" href="title.png">
 	<link rel="stylesheet" href="DZ.css">
 </head>
 <body>
@@ -32,6 +31,24 @@
 		<h3 class="answer">0</h3>
 	</div>
 	<script>
+	let abc = {
+		c:"Key/property = c",
+		d:'Key = d',
+	};
+	console.log('Обєкт -',abc);
+	console.log('Не має такого класу:abc.a?.b -',abc.a?.b);
+	console.log('Не має такого методу:abc.a?.() -',abc.a?.());
+  delete abc?.d;
+	console.log('Обєкт після delete abc?.d - ',abc);
+
+	let user={
+		name: 'Vasya',
+		firstname: "Reut",
+	}
+	let name = user.name + ' ' + user.firstname + ' ' + user.lastname?.() + ' ' + user?.firstname?.a;
+	console.log('Масив user - ',user);
+	console.log('user.name user.firstname user.lastname?.() user?.firstname?.a ',name);
+	//--------------------------------------------------------------------
 		// let calculator = {
 		// 	read() {
 		// 		this.a = +prompt('Enter:', 2);
@@ -49,65 +66,65 @@
 		// calculator.read();
 		// alert(`Sum: ${calculator.sum()}`);
 		// alert(`Mul: ${calculator.mul()}`);
-
-		let question = confirm("Hello on my calculator. \nLet's go?");
-		if (question == true) {
-			calck();
-		}else{
-      location.reload();
-			window.open('https://google.com');
-		};
-		function svith() {
-		let do1 = document.getElementById('selector').value;
-		let num1 = document.getElementById('num1').value;
-		let num2 = document.getElementById('num2').value;
-		let answer = document.querySelector('.answer');
-		num1 = Number(num1);
-		num2 = Number(num2);
-		switch (do1) {
-			case "...":
-				answer.innerHTML = 0;
-				break;
-			case "+":
-				let plus = num1 + num2;
-				answer.innerHTML = plus;
-				break;
-			case "-":
-				let minus = num1 - num2;
-				answer.innerHTML = minus;
-				break;
-			case "*":
-				let mul = num1 * num2;
-				answer.innerHTML = mul;
-				break;
-			case "/":
-				let fifth = num1 / num2;
-				answer.innerHTML = fifth;
-				break;
-			default:
-				answer.innerHTML = 0;
-		}};
-		const number1 = document.getElementById('num1');
-		const number2 = document.getElementById('num2');
-		number1.addEventListener('change', (event) => {
-		svith();
-	});
-		number2.addEventListener('change', (event) => {
-		svith();
-	});
-		function calck() {
-			const docalk = document.getElementById('selector');
-			docalk.addEventListener('change', (event) => {
-      svith();
-		});
-		};
-		document.addEventListener('keydown', logKey);
-		function logKey(e) {
-			if (e.code == "Enter") {
-				svith();
-			} else if (e.code == "Space") {
-				svith();
-			}};
+//--------------------------------------------------------------------
+	// 	let question = confirm("Hello on my calculator. \nLet's go?");
+	// 	if (question == true) {
+	// 		calck();
+	// 	}else{
+  //     location.reload();
+	// 		window.open('https://google.com');
+	// 	};
+	// 	function svith() {
+	// 	let do1 = document.getElementById('selector').value;
+	// 	let num1 = document.getElementById('num1').value;
+	// 	let num2 = document.getElementById('num2').value;
+	// 	let answer = document.querySelector('.answer');
+	// 	num1 = Number(num1);
+	// 	num2 = Number(num2);
+	// 	switch (do1) {
+	// 		case "...":
+	// 			answer.innerHTML = 0;
+	// 			break;
+	// 		case "+":
+	// 			let plus = num1 + num2;
+	// 			answer.innerHTML = plus;
+	// 			break;
+	// 		case "-":
+	// 			let minus = num1 - num2;
+	// 			answer.innerHTML = minus;
+	// 			break;
+	// 		case "*":
+	// 			let mul = num1 * num2;
+	// 			answer.innerHTML = mul;
+	// 			break;
+	// 		case "/":
+	// 			let fifth = num1 / num2;
+	// 			answer.innerHTML = fifth;
+	// 			break;
+	// 		default:
+	// 			answer.innerHTML = 0;
+	// 	}};
+	// 	const number1 = document.getElementById('num1');
+	// 	const number2 = document.getElementById('num2');
+	// 	number1.addEventListener('change', (event) => {
+	// 	svith();
+	// });
+	// 	number2.addEventListener('change', (event) => {
+	// 	svith();
+	// });
+	// 	function calck() {
+	// 		const docalk = document.getElementById('selector');
+	// 		docalk.addEventListener('change', (event) => {
+  //     svith();
+	// 	});
+	// 	};
+	// 	document.addEventListener('keydown', logKey);
+	// 	function logKey(e) {
+	// 		if (e.code == "Enter") {
+	// 			svith();
+	// 		} else if (e.code == "Space") {
+	// 			svith();
+	// 		}};
 </script>
 </body>
 </html>
