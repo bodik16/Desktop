@@ -1,20 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-
 <head>
 	<meta charset="utf-8">
 	<title>Maksym</title>
-	<link rel="shortcut icon" href="title.png">
 	<link rel="stylesheet" href="DZ.css">
 </head>
-
 <body>
 	<h1 style="text-align: center;">Home Work</h1>
 	<div id="enterName" style="color: rgb(20, 20, 20); display: flex; justify-content: center; padding-top: 2px;">
 		<h2 style="margin: 0 10px;">Введіть ваше ім'я:</h2>
-		<!-- <form action="DZ.html" name="searchform" method="get" id="frm">
-			<input type="text" id="inptOne" name="searchstring" size="20" value="Максим" style="margin: 5px auto;">
-		</form> -->
 	</div>
 	<div class="a" style="text-align: center;">
 		<a onclick="submitForm()" href="#"
@@ -37,436 +31,100 @@
 		<h3 class="answer">0</h3>
 	</div>
 	<script>
+	let abc = {
+		c:"Key/property = c",
+		d:'Key = d',
+	};
+	console.log('Обєкт -',abc);
+	console.log('Не має такого класу:abc.a?.b -',abc.a?.b);
+	console.log('Не має такого методу:abc.a?.() -',abc.a?.());
+  delete abc?.d;
+	console.log('Обєкт після delete abc?.d - ',abc);
 
-		let calculator = {
-			read() {
-				this.a = +prompt('Enter:', 2);
-				this.b = +prompt('Eneter b:', 1);
-			},
-			sum() {
-				return this.a + this.b;
-			},
-			mul() {
-				return this.a * this.b;
-			}
-
-		};
-
-		calculator.read();
-		alert(`Sum: ${calculator.sum()}`);
-		alert(`Mul: ${calculator.mul()}`);
-
-		// let question = confirm("let's start?");
-		// if (question == true) {
-		// 	calck();
+	let user={
+		name: 'Vasya',
+		firstname: "Reut",
+	}
+	let name = user.name + ' ' + user.firstname + ' ' + user.lastname?.() + ' ' + user?.firstname?.a;
+	console.log('Масив user - ',user);
+	console.log('user.name user.firstname user.lastname?.() user?.firstname?.a ',name);
+	//--------------------------------------------------------------------
+		// let calculator = {
+		// 	read() {
+		// 		this.a = +prompt('Enter:', 2);
+		// 		this.b = +prompt('Eneter b:', 1);
+		// 	},
+		// 	sum() {
+		// 		return this.a + this.b;
+		// 	},
+		// 	mul() {
+		// 		return this.a * this.b;
+		// 	}
+		//
 		// };
-		// function calck() {
-		// 	const docalk = document.getElementById('selector');
-		// 	docalk.addEventListener('change', (event) => {
-		// 		var do1 = event.target.value;
-		// 		let num1 = document.getElementById('num1').value;
-		// 		let num2 = document.getElementById('num2').value;
-		// 		let answer = document.querySelector('.answer');
-		// 		num1 = Number(num1);
-		// 		num2 = Number(num2);
-		// 		switch (do1) {
-		// 			case "...":
-		// 				answer.innerHTML = 0;
-		// 				break;
-		// 			case "+":
-		// 				let plus = num1 + num2;
-		// 				answer.innerHTML = plus;
-		// 				break;
-		// 			case "-":
-		// 				let minus = num1 - num2;
-		// 				answer.innerHTML = minus;
-		// 				break;
-		// 			case "*":
-		// 				let mul = num1 * num2;
-		// 				answer.innerHTML = mul;
-		// 				break;
-		// 			case "/":
-		// 				let fifth = num1 / num2;
-		// 				answer.innerHTML = fifth;
-		// 				break;
-		// 			default:
-		// 				answer.innerHTML = 0;
-		// 		}
-		// 	});
-		// };
-		// document.addEventListener('keydown', logKey);
-		// function logKey(e) {
-		// 	if (e.code == "Enter") {
-		// 		calck();
-		// 		console.log(e.code);
-		// 	} else if (e.code == "Space") {
-		// 		calck();
-		// 	}
-		// }
-		//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.............HW.................<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-		// let user = {};
-		// user.name = "John";
-		// user.surname = "Smith";
-		// user.name = "Pete";
-		// delete user.name;
-
-
-
-		// let schedule = {};
-		// // schedule.user = 'max';
-		// function isEmpty(obj) {
-		// 	for (let key in obj) {
-		// 		return false;//if is key or property in the obj
-		// 	}
-		// 	return true;//if is not key or property in the obj
-		// }
-		// alert(isEmpty(schedule))
-
-
-
-		// let salaries = {
-		// 	John: 100,
-		// 	Ann: 160,
-		// 	Pete: 130
-		// }
-		// let sum = 0;
-		// for (let prop in salaries) {
-		// 	sum += salaries[prop];
-		// }
-		// alert(`suma: ${sum}`);
-
-
-
-		// let menu = {
-		// 	width: 200,
-		// 	height: 300,
-		// 	title: "My menu"
-		// };
-		// multiplyNumeric(menu);
-		// function multiplyNumeric(menu) {
-		// 	for (let key in menu) {
-		// 		if (typeof (menu[key]) == "number") {
-		// 			menu[key] *= 2;
-		// 		}
-		// 	}
-		// 	console.log(menu);
-		// }
-		//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.............HW.................<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		// let musNames = ["максим", "богдан", "ваня", "сашик"];
-		// function submitForm(one) {
-		// 	if (Boolean(one) == true) {
-		// 		let nameForCheck = prompt('Enter name to check for availability', "Богдан");
-		// 		let a = 0;
-		// 		for (var i = 0; i < musNames.length; i++) {
-		// 			if (musNames[i] == nameForCheck.toLowerCase()) {
-		// 				alert("This name is here");
-		// 				break;
-		// 			}
-		// 			else {
-		// 				a++;
-		// 				if (a == musNames.length - 1) {
-		// 					alert("This name is NOT here");
-		// 				}
-		// 			}
-		// 		};
-		// 	} else {
-		// 		window.open('http://google.com')
-		// 		document.location.reload();
-		// 	}
-		// }
-
-		// document.getElementById('inptOne').onkeypress = function (event) {
-		// 	if (event.keyCode == 13) {
-		// 		var getName = document.getElementById('inptOne').value;
-		// 		for (var i = 0; i < musNames.length; i++) {
-		// 			if (musNames[i] == getName.toLowerCase()) {
-		// 				alert(`this name already is here: ${musNames}`);
-		// 				break;
-		// 			} else {
-		// 				musNames.push(getName.toLowerCase());
-		// 				alert(`your name added: ${musNames}`);
-		// 				break;
-		// 			}
-		// 		};
-		// 		submitForm(getName);
-		// 	}
-		// }
-
-
-
-
-
-
-
-
-
-		//Object.assign(where, that, ..., that);
-
-		// let mainObj = {
-		// 	name: "Name1",
-		// 	years: 20,
-		// 	male: "Male",
-		// 	obj11: "undefined",
-		// }
-		// let copymainObj = mainObj;
-		// mainObj.newKey = "newValue";
-		// console.log("Скопійований:");
-		// console.log(mainObj);
-		// console.log("Копія:");
-		// console.log(copymainObj);
-
-		// let cloneMainObj = {};
-		// for (let key in mainObj) {
-		// 	cloneMainObj[key] = mainObj[key];
-		// }
-		// cloneMainObj.newKey1 = "newValue1";
-		// console.log("Клон mainObj:");
-		// console.log(cloneMainObj);
-
-
-		// let obj1 = {
-		// 	gay: false,
-		// 	"length cock": 15,
-		// 	parents: ["dad", "mom", "sister"],
-		// }
-		// let obj2 = {
-		// 	likesport: true,
-		// 	"length penis": 10,
-		// 	siblings: ["Peter", "Youstaff"],
-		// }
-		// let obj3 = {
-		// 	football: 110,
-		// 	"rip skin": true,
-		// 	area: ["asd", "adsa", "asdar"],
-		// }
-		// Object.assign(mainObj, obj1, obj2, obj3);
-		// console.log("Великий mainObj:");
-		// console.log(mainObj);
-
-
-		// let age22 = prompt("How old are  you?", 18);
-
-		// function ageComporise() {
-		// 	alert("hello, on my page!")
-		// }
-
-		// if (age22 > 17) {
-		// 	ageComporise();
-		// } else {
-		// 	alert("Your age less 18 years:(")
-		// 	window.open('https://google.com');
-		// }
-
-		// const mainDiv = document.getElementById('enterName');
-		// const itemDiv = document.createElement('input');
-		// itemDiv.setAttribute('type', "text");
-		// itemDiv.setAttribute('maxlength', "10");
-		// itemDiv.setAttribute('minlength', "3");
-		// itemDiv.setAttribute('placeholder', "Макс");
-		// itemDiv.setAttribute('id', "inpt");
-		// mainDiv.append(itemDiv);
-		// const itemButton = document.createElement('button');
-		// itemButton.setAttribute('type', "submit");
-		// itemButton.innerHTML = 'Відправити';
-		// itemButton.setAttribute('style', "margin: 0 10px ");
-		// itemButton.setAttribute('id', 'btn')
-		// //itemButton.setAttribute('style', 'visibility: hidden;');
-		// mainDiv.append(itemButton);
-
-		// function permision(nameU) {
-		// 	alert(`Hello, ${ nameU }!you are stay in Найсильніші Team`)
-		// }
-
-		// function submitForm() {
-		// 		if (Boolean(nameUser) == true) {
-		// 			let mus = ["максим", "богдан", "рекет", "ваня"];
-		// 			end: for (let i = 0; i < mus.length; i++) {
-		// 				if (mus[i] == nameUser.toLowerCase()) {
-		// 					permision(nameUser);
-		// 					
-		// 					break end;
-		// 				} else {
-		// 					alert(`You '${nameUser}' not stay this team.`);
-		// 					break end;
-		// 				}
-		// 			}
-		// 		}
-		// 	}
-
-
-		// const btn = document.getElementById('btn');
-
-		// // btn.onclick = function inSubmit() {
-		// const nameUser = document.getElementById('inpt').value;
-		// console.log(`1${ nameUser } `);
-		// const nameNew = document.getElementById('inpt').onkeypress = function (event) {
-		// 	if (event.keyCode == 13) {
-		// 		submitForm();
-		// 	}
-
-		// }
-		//}
-
-
-
-		// alert('Hello, you are my lottery player!');
-		// let ageOrDate = prompt("Enter your age or date of born:", "example: 21 or 2000");
-		// if (ageOrDate == null) {
-		// 	document.location.reload();
-		// } else if (ageOrDate < 18 && ageOrDate > 0 || ageOrDate > 2002 && ageOrDate < 2021) {
-		// 	alert("Sorry but we are open for people over 18 years.")
-		// 	document.location.reload();
-		// 	window.open('https://www.google.com')
-		// } else {
-		// 	let arr = [20, 35, 25, 18, 21, 30, 28, 22, 29, 39, 1993, 1992, 2001, 1996, 2002, 1999, 1991, 1997, 1990, 2000];
-		// 	let check = 0;
-		// 	for (var i = 0; i < arr.length; i++) {
-		// 		if (arr[i] == ageOrDate) {
-		// 			check = arr[i];
-		// 			break;
-		// 		}
-		// 	}
-		// 	if (check) {
-		// 		alert(`My congratulations, you are the winner.\nYour lucky number is ${ arr[i] }.\nLost ${ arr.length - 1 } numbers`);
-		// 		let c = confirm("Want to get your prize?");
-		// 		if (c == true) {
-		// 			document.location.reload();
-		// 			window.open('https://giphy.com/gifs/birthday-fuck-you-middle-finger-gift-ytwDCveyFztWxY30ac')
-		// 		} else {
-		// 			document.location.reload();
-		// 			window.location.replace("https://warthunder.ru/ru/");
-		// 		}
-		// 	} else {
-		// 		let b = confirm(`Unfortunately, your number was not a winner(\n Meybe you see winner numbers ? `);
-		// 		if (b == true) {
-		// 			alert(arr);
-		// 			document.location.reload();
-		// 		} else {
-		// 			document.location.reload();
-		// 			window.location.replace("https://warthunder.ru/ru/");
-		// 		}
-		// 	}
-		// }
-
-
-
-
-
-		// let gender = prompt("Enter your gender:", 'Female');
-		// if (gender.toLowerCase() == "female") {
-		// 	alert("Hello, You are woman")
-		// 	let age = prompt("Please, enter your age", 18);
-		// 	if (age > 0 && age < 18) {
-		// 		alert("Hello, child, you have no place here")
-		// 		location.reload();
-		// 		window.open('https://www.google.com')
-		// 	} else if (age > 17 && age < 26) {
-		// 		alert("Hi, baby\nThis is my home work")
-		// 	} else if (age > 25 && age < 101) {
-		// 		alert("Hello, Woman\nThis is my home work")
-		// 	} else {
-		// 		location.reload();
-		// 		window.open('https://www.google.com')
-		// 	}
-		// } else if (gender.toLowerCase() == "male") {
-		// 	alert("Hello, Broo");
-		// 	let age = prompt("Please, enter your age", 18);
-		// 	if (age > 0 && age < 18) {
-		// 		alert("Hello, child, you have no place here")
-		// 		location.reload();
-		// 		window.open('https://www.google.com')
-		// 	} else if (age > 17 && age < 26) {
-		// 		alert("Hi, young\nThis is my home work")
-		// 	} else if (age > 25 && age < 101) {
-		// 		alert("Hello, Man\nThis is my home work")
-		// 	} else {
-		// 		location.reload();
-		// 		window.open('https://www.google.com')
-		// 	}
-		// }
-
-
-
-
-
-
-
-		// let years = document.querySelector('h1');
-		// setTimeout(dalay, 2000);
-		// var conf;
-		// function dalay() {
-		// 	conf = confirm("Are you over 18 years old?");
-		// 	if (conf == true) {
-		// 		let question = document.createElement('h2');
-		// 		question.innerHTML = "Please, write your age:";
-		// 		question.style = "text-align: center";
-		// 		years.after(question);
-		// 		let years1 = document.querySelector('h2');
-		// 		years1.insertAdjacentHTML('beforeEnd', `< input > `);
-		// 		years1.insertAdjacentHTML('beforeEnd', `< button > Submit</ > `);
-		// 		let years12 = document.querySelector('input');
-		// 		years12.style.cssText = `margin: 0 0 0px 10px; `;
-		// 		years12.setAttribute('type', 'number');
-		// 		years12.setAttribute('value', '18');
-		// 		years12.setAttribute('min', '18');
-		// 		years12.setAttribute('max', '99');
-		// 		years12.setAttribute('maxlength', '2');
-		// 		years12.setAttribute('minlength', '2');
-		// 		let btn = document.querySelector('button');
-		// 		btn.onclick = function writeYears() {
-		// 			let getYears = document.querySelector('input');
-		// 			getYears.setAttribute('id', 'in')
-		// 			let numberYear = document.getElementById("in").value;
-		// 			if (numberYear > 17 && numberYear < 100) {
-		// 				let string = "Your age is " + String(numberYear) + " years!";
-		// 				alert(string);
-		// 			} else {
-		// 				getYears.value = 18;
-		// 				alert("Age is not acceptable, please try again")
-		// 			}
-		// 		}
-		// 	} else {
-		// 		window.location.href = "https://google.com"
-		// 	}
-		// }
-
-
-
-
-
-		// let age = prompt("Enter your age", "18");
-		// let ageU = +age;
-		// if (ageU % 2 == 0) {
-		// 	alert(`Ваш вік парний: ${ ageU } years.`);
-		// } else {
-		// 	ageU++;
-		// 	alert(`Ваш вік не парний, а ми не любимо не парні числa.Тому ваш вік стане парним:   ${ ageU } years.   ;)`);
-		// }
-		// ageU = (ageU < 18) ? alert(`If(yourAge >= 18) {то підносимо його в 3 степінь } Ваше число доступа = ${ ageU ** 3 } `) : alert(`If(yourAge < 18) {то підносимо його в 2 степінь } Ваше число доступа = ${ ageU ** 2 }`);
-
-	</script>
-
+		//
+		// calculator.read();
+		// alert(`Sum: ${calculator.sum()}`);
+		// alert(`Mul: ${calculator.mul()}`);
+//--------------------------------------------------------------------
+	// 	let question = confirm("Hello on my calculator. \nLet's go?");
+	// 	if (question == true) {
+	// 		calck();
+	// 	}else{
+  //     location.reload();
+	// 		window.open('https://google.com');
+	// 	};
+	// 	function svith() {
+	// 	let do1 = document.getElementById('selector').value;
+	// 	let num1 = document.getElementById('num1').value;
+	// 	let num2 = document.getElementById('num2').value;
+	// 	let answer = document.querySelector('.answer');
+	// 	num1 = Number(num1);
+	// 	num2 = Number(num2);
+	// 	switch (do1) {
+	// 		case "...":
+	// 			answer.innerHTML = 0;
+	// 			break;
+	// 		case "+":
+	// 			let plus = num1 + num2;
+	// 			answer.innerHTML = plus;
+	// 			break;
+	// 		case "-":
+	// 			let minus = num1 - num2;
+	// 			answer.innerHTML = minus;
+	// 			break;
+	// 		case "*":
+	// 			let mul = num1 * num2;
+	// 			answer.innerHTML = mul;
+	// 			break;
+	// 		case "/":
+	// 			let fifth = num1 / num2;
+	// 			answer.innerHTML = fifth;
+	// 			break;
+	// 		default:
+	// 			answer.innerHTML = 0;
+	// 	}};
+	// 	const number1 = document.getElementById('num1');
+	// 	const number2 = document.getElementById('num2');
+	// 	number1.addEventListener('change', (event) => {
+	// 	svith();
+	// });
+	// 	number2.addEventListener('change', (event) => {
+	// 	svith();
+	// });
+	// 	function calck() {
+	// 		const docalk = document.getElementById('selector');
+	// 		docalk.addEventListener('change', (event) => {
+  //     svith();
+	// 	});
+	// 	};
+	// 	document.addEventListener('keydown', logKey);
+	// 	function logKey(e) {
+	// 		if (e.code == "Enter") {
+	// 			svith();
+	// 		} else if (e.code == "Space") {
+	// 			svith();
+	// 		}};
+</script>
 </body>
-
 </html>
