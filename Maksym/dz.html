@@ -8,25 +8,25 @@
 <body>
 	<h1 style="text-align: center;">Home Work</h1>
 	<script type="text/javascript">
-// 	let inputPrice = prompt("Enter your price with currency symbol: ","$100");
-// 	extractCurrencyValue(inputPrice);
-// function extractCurrencyValue(str) {
-// 	if(str.includes('$')||str.includes('€')||str.includes('₴')){
-// 	if(str.includes('$')){
-// 		alert(`${str.slice(1)} доларів`);
-// 		window.location.reload();
-// 	}
-// 	if(str.includes('€')){
-// 		alert(`${str.slice(1)} євро`);
-// 		window.location.reload();
-// 	}
-// 	if(str.includes('₴')){
-// 		alert(`${str.slice(1)} гривнів`);
-// 		window.location.reload();
-// 	}}else{
-// 		alert('We entered erroneous value, try inserting before the number: $, €, ₴');
-//     window.location.reload();
-// 	}}
+	let inputPrice = prompt("Enter your price with currency symbol: ","$100");
+	extractCurrencyValue(inputPrice);
+function extractCurrencyValue(str) {
+	if(str.includes('$')||str.includes('€')||str.includes('₴')){
+	if(str.includes('$')){
+		alert(`${str.slice(1)} доларів`);
+		window.location.reload();
+	}
+	if(str.includes('€')){
+		alert(`${str.slice(1)} євро`);
+		window.location.reload();
+	}
+	if(str.includes('₴')){
+		alert(`${str.slice(1)} гривнів`);
+		window.location.reload();
+	}}else{
+		alert('We entered erroneous value, try inserting before the number: $, €, ₴');
+    window.location.reload();
+	}}
 
 // let strCheck = prompt('Enter string:','qwer...');
 // let lengthStr = +prompt("Enter string/'s length", '5')
@@ -41,27 +41,19 @@
 // 	 }
 //  }
 
-let a = prompt('Enter any Sentence for check:','I love only girl`s ass.');
-let enteredSentence = a.toLowerCase();
-alert(`Виправлене sentence: ${colorCheck(enteredSentence)}`);
-window.location.reload();
-function colorCheck(str){
-	let badwords = ['bitch','pussy','retard','suka','blyat','asshole','ass'];
-	for(let i =0;i<badwords.length;i++){
-		if(str.includes(`${badwords[i]}`)){
-			let the = str.replace(`${badwords[i]}`, '****');
-			return the;
-}
-		}
-	};
-
-
-
-
-
-
-
-
+// let a = prompt('Enter any Sentence for check:','I love only girl`s ass.');
+// let enteredSentence = a.toLowerCase();
+// alert(`Виправлене sentence: ${colorCheck(enteredSentence)}`);
+// window.location.reload();
+// function colorCheck(str){
+// 	let badwords = ['bitch','pussy','retard','suka','blyat','asshole','ass'];
+// 	for(let i =0;i<badwords.length;i++){
+// 		if(str.includes(`${badwords[i]}`)){
+// 			let the = str.replace(`${badwords[i]}`, '****');
+// 			return the;
+// }
+// 		}
+// 	};
 	</script>
 </body>
 </html>
