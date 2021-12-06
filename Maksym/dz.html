@@ -7,124 +7,53 @@
 </head>
 <body>
 	<h1 style="text-align: center;">Home Work</h1>
-	<div id="enterName" style="color: rgb(20, 20, 20); display: flex; justify-content: center; padding-top: 2px;">
-		<h2 style="margin: 0 10px;">Введіть ваше ім'я:</h2>
-	</div>
-	<div class="a" style="text-align: center;">
-		<a onclick="submitForm()" href="#"
-			style="margin-top: 5px;font-size: 20px; border: 1px solid black; border-radius: 4px; padding: 2px; text-decoration: underline; display: none;">Submit,it
-			is not button</a>
-	</div>
-	<div class="divCalc" style="border: 3px solid rgb(0, 0, 0);padding: 3px; display: flex;">
-		<form action="DZ.html" name="searchform" method="get" id="frm">
-			<input id="num1" class="inpt" type="number" max="99" min="-99" width="10px" value="1">
-			<select id="selector">
-				<option value="...">...</option>
-				<option value="+">+</option>
-				<option value="-">-</option>
-				<option value="*">*</option>
-				<option value="/">/</option>
-			</select>
-			<input id="num2" class="inpt" type="number" max="99" min="-99" value="1">
-		</form>
-		<h3>=</h3>
-		<h3 class="answer">0</h3>
-	</div>
-	<script>
-	let abc = {
-		c:"Key/property = c",
-		d:'Key = d',
-	};
-	console.log('Обєкт -',abc);
-	console.log('Не має такого класу:abc.a?.b -',abc.a?.b);
-	console.log('Не має такого методу:abc.a?.() -',abc.a?.());
-  delete abc?.d;
-	console.log('Обєкт після delete abc?.d - ',abc);
-
-	let user={
-		name: 'Vasya',
-		firstname: "Reut",
+	<script type="text/javascript">
+	let inputPrice = prompt("Enter your price with currency symbol: ","$100");
+	extractCurrencyValue(inputPrice);
+function extractCurrencyValue(str) {
+	if(str.includes('$')||str.includes('€')||str.includes('₴')){
+	if(str.includes('$')){
+		alert(`${str.slice(1)} доларів`);
+		window.location.reload();
 	}
-	let name = user.name + ' ' + user.firstname + ' ' + user.lastname?.() + ' ' + user?.firstname?.a;
-	console.log('Масив user - ',user);
-	console.log('user.name user.firstname user.lastname?.() user?.firstname?.a ',name);
-	//--------------------------------------------------------------------
-		// let calculator = {
-		// 	read() {
-		// 		this.a = +prompt('Enter:', 2);
-		// 		this.b = +prompt('Eneter b:', 1);
-		// 	},
-		// 	sum() {
-		// 		return this.a + this.b;
-		// 	},
-		// 	mul() {
-		// 		return this.a * this.b;
-		// 	}
-		//
-		// };
-		//
-		// calculator.read();
-		// alert(`Sum: ${calculator.sum()}`);
-		// alert(`Mul: ${calculator.mul()}`);
-//--------------------------------------------------------------------
-	// 	let question = confirm("Hello on my calculator. \nLet's go?");
-	// 	if (question == true) {
-	// 		calck();
-	// 	}else{
-  //     location.reload();
-	// 		window.open('https://google.com');
-	// 	};
-	// 	function svith() {
-	// 	let do1 = document.getElementById('selector').value;
-	// 	let num1 = document.getElementById('num1').value;
-	// 	let num2 = document.getElementById('num2').value;
-	// 	let answer = document.querySelector('.answer');
-	// 	num1 = Number(num1);
-	// 	num2 = Number(num2);
-	// 	switch (do1) {
-	// 		case "...":
-	// 			answer.innerHTML = 0;
-	// 			break;
-	// 		case "+":
-	// 			let plus = num1 + num2;
-	// 			answer.innerHTML = plus;
-	// 			break;
-	// 		case "-":
-	// 			let minus = num1 - num2;
-	// 			answer.innerHTML = minus;
-	// 			break;
-	// 		case "*":
-	// 			let mul = num1 * num2;
-	// 			answer.innerHTML = mul;
-	// 			break;
-	// 		case "/":
-	// 			let fifth = num1 / num2;
-	// 			answer.innerHTML = fifth;
-	// 			break;
-	// 		default:
-	// 			answer.innerHTML = 0;
-	// 	}};
-	// 	const number1 = document.getElementById('num1');
-	// 	const number2 = document.getElementById('num2');
-	// 	number1.addEventListener('change', (event) => {
-	// 	svith();
-	// });
-	// 	number2.addEventListener('change', (event) => {
-	// 	svith();
-	// });
-	// 	function calck() {
-	// 		const docalk = document.getElementById('selector');
-	// 		docalk.addEventListener('change', (event) => {
-  //     svith();
-	// 	});
-	// 	};
-	// 	document.addEventListener('keydown', logKey);
-	// 	function logKey(e) {
-	// 		if (e.code == "Enter") {
-	// 			svith();
-	// 		} else if (e.code == "Space") {
-	// 			svith();
-	// 		}};
-</script>
+	if(str.includes('€')){
+		alert(`${str.slice(1)} євро`);
+		window.location.reload();
+	}
+	if(str.includes('₴')){
+		alert(`${str.slice(1)} гривнів`);
+		window.location.reload();
+	}}else{
+		alert('We entered erroneous value, try inserting before the number: $, €, ₴');
+    window.location.reload();
+	}}
+
+// let strCheck = prompt('Enter string:','qwer...');
+// let lengthStr = +prompt("Enter string/'s length", '5')
+// alert(`Cut string: ${truncate(strCheck, lengthStr)}...`);
+// 		 window.location.reload();
+//  function truncate(str, maxlength){
+// 	 if(str.length > maxlength){
+// 		 return str.slice(0,maxlength);
+// 	 }else{
+// 		 alert(`Your string is unchanged: ${str}`);
+// 		 window.location.reload();
+// 	 }
+//  }
+
+// let a = prompt('Enter any Sentence for check:','I love only girl`s ass.');
+// let enteredSentence = a.toLowerCase();
+// alert(`Виправлене sentence: ${colorCheck(enteredSentence)}`);
+// window.location.reload();
+// function colorCheck(str){
+// 	let badwords = ['bitch','pussy','retard','suka','blyat','asshole','ass'];
+// 	for(let i =0;i<badwords.length;i++){
+// 		if(str.includes(`${badwords[i]}`)){
+// 			let the = str.replace(`${badwords[i]}`, '****');
+// 			return the;
+// }
+// 		}
+// 	};
+	</script>
 </body>
 </html>
