@@ -5,28 +5,51 @@
 	<title>Maksym</title>
 	<link rel="stylesheet" href="DZ.css">
 </head>
+<header>
+<h2>ewew</h2>
+</header>
+
 <body>
 	<h1 style="text-align: center;">Home Work</h1>
+
+
+
+
 	<script type="text/javascript">
-	let inputPrice = prompt("Enter your price with currency symbol: ","$100");
-	extractCurrencyValue(inputPrice);
-function extractCurrencyValue(str) {
-	if(str.includes('$')||str.includes('€')||str.includes('₴')){
-	if(str.includes('$')){
-		alert(`${str.slice(1)} доларів`);
-		window.location.reload();
+
+let styles = ['Jazz','Blues',];
+styles.push('Rock&Roll');
+styles[Math.floor(styles.length/2)]="Classic";
+let a = styles.shift();
+console.log(a);
+styles.unshift('Rap','Raggy');
+console.log(styles);
+for(let i=0; i < styles.length;i++){
+	if(styles[i]=='Raggy'){
+		styles[i]='village`s dance';
+		console.log(styles);
 	}
-	if(str.includes('€')){
-		alert(`${str.slice(1)} євро`);
-		window.location.reload();
-	}
-	if(str.includes('₴')){
-		alert(`${str.slice(1)} гривнів`);
-		window.location.reload();
-	}}else{
-		alert('We entered erroneous value, try inserting before the number: $, €, ₴');
-    window.location.reload();
-	}}
+}
+
+// 	let inputPrice = prompt("Enter your price with currency symbol: ","$100");
+// 	extractCurrencyValue(inputPrice);
+// function extractCurrencyValue(str) {
+// 	if(str.includes('$')||str.includes('€')||str.includes('₴')){
+// 	if(str.includes('$')){
+// 		alert(`${str.slice(1)} доларів`);
+// 		window.location.reload();
+// 	}
+// 	if(str.includes('€')){
+// 		alert(`${str.slice(1)} євро`);
+// 		window.location.reload();
+// 	}
+// 	if(str.includes('₴')){
+// 		alert(`${str.slice(1)} гривнів`);
+// 		window.location.reload();
+// 	}}else{
+// 		alert('We entered erroneous value, try inserting before the number: $, €, ₴');
+//     window.location.reload();
+// 	}}
 
 // let strCheck = prompt('Enter string:','qwer...');
 // let lengthStr = +prompt("Enter string/'s length", '5')
@@ -55,5 +78,8 @@ function extractCurrencyValue(str) {
 // 		}
 // 	};
 	</script>
+	<footer>
+
+	</footer>
 </body>
 </html>
