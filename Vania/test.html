@@ -9,26 +9,24 @@
 </head>
 <body>
 <script>
-let calculator = {
-    read() {
-        this.a = prompt('Введіть а',0);
-        this.b = prompt('Введіть b',0);
-},
-    sum() {
-        return this.a + this.b;
-},
-    mul () {
-        return this.a * this.b;
-}
 
-};
-calculator.read();
-alert( calculator.sum() );
-alert( calculator.mul() );
-
-
-
-
+    let styles = ['Джаз','Блюз'];
+    styles.push('Рок-н-ролл');
+    alert(styles);
+    let a = +styles.length;
+    let b = +a/2;
+    let c = +Math.floor(b);
+    styles[c] = 'Классика';
+    alert(styles);
+    alert(styles.shift());
+    styles.unshift('Реп','Регги');
+    alert(styles);
+    for (i = 0; i<=styles.length; i++) {
+        if (styles[i] == 'Регги'){
+            styles[i] = 'Сильські танці';
+        }
+    }
+    alert(styles);
 
 
 
@@ -37,6 +35,66 @@ alert( calculator.mul() );
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+    // let cars = [ 'Ford', 'Fiat', 'Zaz'];
+    // alert(cars[2]);
+    // if (cars[2] == 'Zaz') {
+    //     cars[3] = 'BMW';
+    // }
+    // alert(cars[3]);
+    // alert(cars.length);
+    // alert(cars);
+    // cars.push('Ferarri','lamborgini');
+    // cars.unshift('Mazda','Mersedes');
+    // alert(cars);
+    // cars.shift();
+    // cars.pop();
+    // alert(cars);
+
+
+
+    //alert(Math.random());
+    //let a = 0.3;
+    //let b = 0.2;
+    // alert(a*b);
+    // let num = 141034839286186301;
+    // alert(num.toString(2));
+    // alert(num.toString(8));
+    // alert(num.toString(16));
+    // alert(num.toString(32));
+    // alert(12877838..toString(2));
+    // alert(2e1000);
+    //alert(a+b==0.5);
+    //alert(0.1.toFixed(100));
+
+
+
+// let calculator = {
+//     read() {
+//         this.a =+ prompt('Введіть а',0);
+//         this.b =+ prompt('Введіть b',0);
+// },
+//     sum() {
+//         return this.a + this.b;
+// },
+//     mul () {
+//         return this.a * this.b;
+// }
+//
+// };
+// calculator.read();
+// alert( calculator.sum() );
+// alert( calculator.mul() )
     // let cat = {
     //     nickname: 'Сарделька',
     //     breed: 'Тойбоб',
